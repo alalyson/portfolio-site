@@ -555,6 +555,7 @@ menu.addEventListener('click', () => {
   menu.setAttribute('aria-expanded', String(open));
   nav.classList.toggle('open', open);
 });
+
 function reveal(hash) {
   let id;
   try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
@@ -565,24 +566,88 @@ function reveal(hash) {
     if (parent.tagName === 'DETAILS') parent.open = true;
     parent = parent.parentElement;
   }
-  requestAnimationFrame(() => target.scrollIntoView({
+  return target;
+}
+
+const stateKey = '__portfolioNavigation';
+const details = Array.from(document.querySelectorAll('details'));
+let restoring = false;
+let pendingFrame = 0;
+history.scrollRestoration = 'manual';
+
+function snapshot() {
+  return {
+    x: scrollX,
+    y: scrollY,
+    openDetails: details.map((detail, index) => detail.open ? index : -1).filter(index => index >= 0)
+  };
+}
+function remember() {
+  if (!restoring) history.replaceState({ ...history.state, [stateKey]: snapshot() }, '');
+}
+function queueRemember() {
+  if (restoring || pendingFrame) return;
+  pendingFrame = requestAnimationFrame(() => {
+    pendingFrame = 0;
+    remember();
+  });
+}
+function restore(saved) {
+  restoring = true;
+  cancelAnimationFrame(pendingFrame);
+  pendingFrame = 0;
+  details.forEach((detail, index) => { detail.open = saved.openDetails.includes(index); });
+  requestAnimationFrame(() => {
+    window.scrollTo({ left: saved.x, top: saved.y, behavior: 'instant' });
+    restoring = false;
+    remember();
+  });
+}
+function scrollToTarget(target) {
+  target.scrollIntoView({
     block: 'start',
     behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
-  }));
+  });
 }
+
 document.addEventListener('click', e => {
+  if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
   const a = e.target.closest('a[href^="#"]');
-  if (!a) return;
+  if (!a || a.hasAttribute('download') || (a.target && a.target !== '_self')) return;
   const hash = a.getAttribute('href');
   if (hash.length < 2) return;
+  let id;
+  try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
+  if (!document.getElementById(id)) return;
+  e.preventDefault();
+  // Save the departure view before opening code panels changes the page height.
+  remember();
   menu.setAttribute('aria-expanded', 'false');
   nav.classList.remove('open');
-  if (document.getElementById(hash.slice(1))) {
-    e.preventDefault();
-    history.replaceState(null, '', hash);
-    reveal(hash);
+  const target = reveal(hash);
+  const destination = snapshot();
+  destination.y = Math.max(0, Math.min(
+    scrollY + target.getBoundingClientRect().top - (parseFloat(getComputedStyle(target).scrollMarginTop) || 0),
+    document.documentElement.scrollHeight - innerHeight
+  ));
+  history.pushState({ ...history.state, [stateKey]: destination }, '', hash);
+  scrollToTarget(target);
+});
+window.addEventListener('scroll', queueRemember, { passive: true });
+document.addEventListener('toggle', queueRemember, true);
+window.addEventListener('popstate', event => {
+  const saved = event.state?.[stateKey];
+  if (saved) restore(saved);
+  else {
+    const target = reveal(location.hash);
+    if (target) scrollToTarget(target);
+    queueRemember();
   }
 });
-if (location.hash) reveal(location.hash);
-window.addEventListener('hashchange', () => reveal(location.hash));
+if (history.state?.[stateKey]) restore(history.state[stateKey]);
+else {
+  const target = reveal(location.hash);
+  if (target) target.scrollIntoView({ block: 'start', behavior: 'instant' });
+  remember();
+}
 </script><script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script></body></html>
