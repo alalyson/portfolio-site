@@ -49,7 +49,7 @@ html{scrollbar-gutter:stable}.nav{gap:22px}.profile-intro{display:flex;align-ite
 .abap-story{border-bottom:1px solid var(--line);padding:0 0 55px;scroll-margin-top:84px}.abap-story-head{padding-top:18px}.abap-story-head h3{font-size:34px;margin:15px 0}.abap-story-head>p{font-size:15px}.business-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;gap:1px;background:var(--line);padding:1px;margin:30px 0;border-radius:5px;overflow:hidden}.business-flow li{background:#edf2fc;padding:18px 16px;font-size:13px;font-weight:700;line-height:1.6}.business-flow li>span{display:block;font:11px var(--mono);color:var(--blue);margin-bottom:9px}.business-context{margin:30px 0}.business-context>b{font-size:18px}.business-context>p{font-size:14px;margin:10px 0 16px}.design-note{border-left:3px solid var(--blue);padding:20px 25px;background:#edf2fc;margin:22px 0 40px}.design-note b{font-size:15px}.design-note p{font-size:13px;margin:8px 0 0}.data-thread{padding:23px;background:#fff;border:1px solid var(--line);border-radius:6px}.data-thread p{font-size:13px;margin:10px 0}.data-thread small{font-size:11px;letter-spacing:0;color:var(--muted);font-weight:400}.abap-code{scroll-margin-top:170px}.abap-code-meta{border-top:1px solid var(--line);padding:12px 15px;font:10px var(--mono);color:var(--muted);overflow-wrap:anywhere}.abap-code pre{padding:20px;margin:0;background:var(--navy);color:#dce6ff;white-space:pre;tab-size:2}.supporting-evidence{border:1px solid var(--line);border-radius:6px;padding:18px;margin:24px 0}.supporting-evidence>summary{cursor:pointer;font-size:14px;font-weight:700}.supporting-evidence>.capture-card{margin-top:18px;max-width:750px}.supporting-evidence img{aspect-ratio:auto}.abap-intro,.abap-story,#overview{scroll-margin-top:84px}
 @media(max-width:900px){.hero h1{font-size:44px}.abap-thesis{gap:25px}.business-flow li{padding:14px 10px;font-size:12px}.abap-story-head h3{font-size:29px}}
 @media(max-width:700px){.hero h1{font-size:40px;letter-spacing:-2px}.abap-thesis{grid-template-columns:1fr;gap:14px;padding-left:18px}.abap-thesis h3{font-size:26px}.abap-project-grid{grid-template-columns:1fr}.abap-project-card{padding:23px}.abap-project-card h3{font-size:24px}.business-flow{grid-template-columns:1fr}.business-flow li{display:flex;align-items:center;gap:15px;padding:12px 16px}.business-flow li>span{margin:0}.abap-story-head>p{font-size:13px}.abap-story-head h3{font-size:28px}.design-note{padding:18px}.abap-code{scroll-margin-top:150px}.nav.open{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 20px}.nav a{white-space:nowrap}.contribution-note{line-height:1.9}}
-.allocation-captures{border:1px solid var(--line);border-radius:6px;background:#fff;overflow:hidden}.allocation-captures>summary{padding:15px 18px;cursor:pointer;font-size:13px;font-weight:700;color:var(--blue)}.allocation-captures>div{display:grid;gap:16px;padding:0 16px 16px}#abap-allocation .capture-card .capture-link{aspect-ratio:auto}#abap-allocation .capture-card img{height:auto}
+.allocation-captures{border:1px solid var(--line);border-radius:6px;background:#fff;overflow:hidden}.allocation-captures>summary{padding:15px 18px;cursor:pointer;font-size:13px;font-weight:700;color:var(--blue)}.allocation-captures>div{display:grid;gap:16px;padding:0 16px 16px}.abap-story .capture-card .capture-link{aspect-ratio:auto}.abap-story .capture-card img{height:auto}
 .abap-featured{background:var(--navy);color:#fff;padding:30px;border-radius:7px;margin:0 0 30px}.abap-featured h3{font-size:26px;line-height:1.5;margin:24px 0}.featured-programs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.hero-process{display:block;border-top:1px solid #3d4a61;padding:22px 0}.hero-process>span{font:11px var(--mono);color:#9eb7ff;display:block;margin-bottom:8px}.hero-process>b{font-size:23px}.hero-process>p{font-size:13px;color:#bcc9e1;margin:7px 0 0}.hero-process:hover>b{color:#bfd0ff}.hero-process:focus-visible{outline:2px solid #bfd0ff;outline-offset:4px}@media(max-width:700px){.abap-featured{padding:24px}.abap-featured h3{font-size:22px}.featured-programs{grid-template-columns:1fr;gap:0}}
 /* Give the introduction its own first screen before certifications. */
 .hero-actions{flex-wrap:wrap;gap:14px}.hero-actions .primary{display:inline-flex;align-items:center;justify-content:center;min-width:182px}
@@ -124,7 +124,24 @@ html{scrollbar-gutter:stable}.nav{gap:22px}.profile-intro{display:flex;align-ite
       MESSAGE s002.
     ENDIF.
   ENDIF.
-ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">02</span><div><h4>채권과 입금을 대조하고 미리보기</h4><p>거래처별 미결채권과 입금 내역을 함께 조회합니다. 선수금과 부분 반제를 고려하고, 미리보기와 확정에서 다른 처리 경로를 사용합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-preview.png" data-caption="거래처별 미결채권·입금 대조" aria-label="거래처별 미결채권·입금 대조 확대"><img src="assets/abap-ar-preview.png" alt="거래처별 미결채권·입금 대조" width="661" height="329" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>거래처별 미결채권·입금 대조</h4><p>좌측 거래처를 선택하고 우측 미결채권과 입금 내역을 대조합니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A07"><summary>시뮬레이션과 실제 전표 생성 분리<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="시뮬레이션과 실제 전표 생성 분리 코드"><code>IF lt_docs IS NOT INITIAL.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">02</span><div><h4>거래처별 채권과 입금 상태 확인</h4><p>거래처와 조회 기간을 선택하고 미결채권·예금 내역을 대조합니다. 연체·미연체·채권 없음 상태를 구분해 후속 처리가 필요한 고객을 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-lookup-17h04m28s240-hd.png" data-caption="연체 고객의 채권·입금 대조" aria-label="연체 고객의 채권·입금 대조 확대"><img src="assets/abap-ar-lookup-17h04m28s240-hd.png" alt="연체 고객의 채권·입금 대조" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>연체 고객의 채권·입금 대조</h4><p>샐러디랩 성수점의 미결채권과 예금 내역을 함께 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 5장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-lookup-17h03m05s917-hd.png" data-caption="반제 조회 조건" aria-label="반제 조회 조건 확대"><img src="assets/abap-ar-lookup-17h03m05s917-hd.png" alt="반제 조회 조건" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>반제 조회 조건</h4><p>회사코드·거래처·증빙일·가상계좌로 조회 범위를 지정합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-lookup-17h03m15s735-hd.png" data-caption="거래처 검색 도움말" aria-label="거래처 검색 도움말 확대"><img src="assets/abap-ar-lookup-17h03m15s735-hd.png" alt="거래처 검색 도움말" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>거래처 검색 도움말</h4><p>거래처 코드와 이름을 보고 조회 대상을 선택합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-lookup-17h03m52s649-hd.png" data-caption="거래처별 상태 목록" aria-label="거래처별 상태 목록 확대"><img src="assets/abap-ar-lookup-17h03m52s649-hd.png" alt="거래처별 상태 목록" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>거래처별 상태 목록</h4><p>상태 아이콘과 거래처 목록에서 조회할 고객을 선택합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-lookup-17h11m09s079-hd.png" data-caption="미연체 고객 조회" aria-label="미연체 고객 조회 확대"><img src="assets/abap-ar-lookup-17h11m09s079-hd.png" alt="미연체 고객 조회" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>미연체 고객 조회</h4><p>그린테이블 판교점의 미결채권과 입금 내역을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-lookup-17h12m28s509-hd.png" data-caption="채권이 없는 고객 조회" aria-label="채권이 없는 고객 조회 확대"><img src="assets/abap-ar-lookup-17h12m28s509-hd.png" alt="채권이 없는 고객 조회" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>채권이 없는 고객 조회</h4><p>가든샤브 용산점의 채권 미존재 상태를 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A24"><summary>거래처 선택과 채권·입금 조회 연결<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="거래처 선택과 채권·입금 조회 연결 코드"><code>FORM handle_hotspot_click USING ps_row TYPE lvc_s_row
+                                ps_col TYPE lvc_s_col.
+  IF ps_row-rowtype IS NOT INITIAL.
+    EXIT.
+  ENDIF.
+  READ TABLE gt_bpheader INTO gs_bpheader INDEX ps_row-index.
+  IF sy-subrc NE 0.
+    EXIT.
+  ENDIF.
+  CASE ps_col-fieldname.
+    WHEN &#x27;PARTNER&#x27;.
+      PERFORM hotspot_ardata  USING gs_bpheader-partner.
+      PERFORM hotspot_deposit USING gs_bpheader-vacct.
+  ENDCASE.
+  IF sy-subrc NE 0.
+    EXIT.
+  ENDIF.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">03</span><div><h4>일괄 반제 전 미리보기와 선수금 검토</h4><p>실제 반제 전에 전체 고객의 처리 결과를 시뮬레이션합니다. 미결채권보다 입금액이 크면 차액을 선수금으로 처리하고, 입금이 부족하면 남은 채권을 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-simulation-17h17m36s374-hd.png" data-caption="일괄 반제 시뮬레이션 결과" aria-label="일괄 반제 시뮬레이션 결과 확대"><img src="assets/abap-ar-simulation-17h17m36s374-hd.png" alt="일괄 반제 시뮬레이션 결과" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>일괄 반제 시뮬레이션 결과</h4><p>실제 확정 전에 고객별 채권·입금 변화를 미리 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 2장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-simulation-17h16m35s456-hd.png" data-caption="일괄 반제 미리보기 실행" aria-label="일괄 반제 미리보기 실행 확대"><img src="assets/abap-ar-simulation-17h16m35s456-hd.png" alt="일괄 반제 미리보기 실행" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>일괄 반제 미리보기 실행</h4><p>화면 상단의 미리보기 기능으로 시뮬레이션을 시작합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-simulation-17h18m05s307-hd.png" data-caption="선수금 처리 미리보기" aria-label="선수금 처리 미리보기 확대"><img src="assets/abap-ar-simulation-17h18m05s307-hd.png" alt="선수금 처리 미리보기" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>선수금 처리 미리보기</h4><p>입금액과 채권액을 대조해 초과 입금 처리 결과를 검토합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A07"><summary>시뮬레이션과 실제 전표 생성 분리<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="시뮬레이션과 실제 전표 생성 분리 코드"><code>IF lt_docs IS NOT INITIAL.
   IF pv_simul IS INITIAL.
     CALL METHOD zcl_e2_fi_posting=&gt;create_fi_multi_document
       EXPORTING
@@ -173,7 +190,87 @@ LOOP AT gt_aropen ASSIGNING FIELD-SYMBOL(&lt;fs_open&gt;)
   ENDLOOP.
   IF lv_remain_ar_amt &lt;= 0.
     CONTINUE.
-  ENDIF.</code></pre></details></div></div></section><aside class="design-note"><b>미리보기와 확정을 분리한 이유</b><p>반제 검토 중 실제 데이터가 변경되는 문제와, 부분 반제 이후 잔액 처리 문제를 개발 과정에서 다뤘습니다. 미리보기에서는 임시 전표번호를 구성하고, 확정 경로에서 다중 전표 생성 메서드를 호출하도록 분리했습니다.</p></aside><section class="feature-pair"><div class="feature-heading"><span class="feature-order">03</span><div><h4>확정 결과에서 관련 전표까지 확인</h4><p>반제 결과를 확인한 뒤 전표번호로 관련 전표를 추적합니다. 오류 정정이 필요한 경우에는 조회·역분개 기능으로 이어집니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-result.png" data-caption="매출채권 반제 결과" aria-label="매출채권 반제 결과 확대"><img src="assets/abap-ar-result.png" alt="매출채권 반제 결과" width="595" height="312" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>매출채권 반제 결과</h4><p>처리 상태와 메시지, 미결채권·입금 내역을 함께 확인합니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A09"><summary>전표번호를 이용한 상세 조회 연결<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="전표번호를 이용한 상세 조회 연결 코드"><code>FORM handle_hotspot_posting_ar  USING ps_row TYPE lvc_s_row
+  ENDIF.</code></pre></details></div></div></section><aside class="design-note"><b>검토와 확정을 분리한 이유</b><p>미리보기에서는 임시 전표번호로 결과를 확인하고, 확정 경로에서 실제 전표를 생성합니다. 은행 API를 연결하지 않은 모의 프로젝트이므로 고객 입금 즉시 처리하는 대신 전체 고객의 채권·입금을 일괄 반제하도록 구현했습니다.</p></aside><section class="feature-pair"><div class="feature-heading"><span class="feature-order">04</span><div><h4>일괄 반제 확정과 잔액·선수금 확인</h4><p>검토한 결과를 확정하고 고객별 처리 결과를 확인합니다. 입금이 부족한 고객은 잔여 채권이 남고, 초과 입금 또는 채권 없는 입금은 선수금으로 남겨 이후 거래에서 우선 상계합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-confirm-17h19m41s927-hd.png" data-caption="일괄 반제 확정 결과" aria-label="일괄 반제 확정 결과 확대"><img src="assets/abap-ar-confirm-17h19m41s927-hd.png" alt="일괄 반제 확정 결과" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>일괄 반제 확정 결과</h4><p>전체 고객의 반제 결과와 처리 완료 메시지를 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 3장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-confirm-17h19m06s005-hd.png" data-caption="확정할 고객 내역 검토" aria-label="확정할 고객 내역 검토 확대"><img src="assets/abap-ar-confirm-17h19m06s005-hd.png" alt="확정할 고객 내역 검토" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>확정할 고객 내역 검토</h4><p>일괄 반제를 확정하기 전 고객별 채권과 입금을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-confirm-17h23m07s688-hd.png" data-caption="부분 반제 후 잔여 채권" aria-label="부분 반제 후 잔여 채권 확대"><img src="assets/abap-ar-confirm-17h23m07s688-hd.png" alt="부분 반제 후 잔여 채권" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>부분 반제 후 잔여 채권</h4><p>입금액이 채권액보다 작은 스테이호텔 을지로점의 남은 채권을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-confirm-17h26m08s960-hd.png" data-caption="선수금으로 남은 초과 입금" aria-label="선수금으로 남은 초과 입금 확대"><img src="assets/abap-ar-confirm-17h26m08s960-hd.png" alt="선수금으로 남은 초과 입금" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>선수금으로 남은 초과 입금</h4><p>채권 없이 입금한 고객의 선수금을 확인합니다. 대변 잔액은 음수로 표시하며, 예금 내역에도 선수금 잔액이 남습니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A25"><summary>확정 시 반제 내역·입금 상태 반영<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="확정 시 반제 내역·입금 상태 반영 코드"><code>IF pv_simul IS INITIAL.
+  IF lt_del_open IS NOT INITIAL.
+    INSERT zte2fi0008 FROM TABLE lt_del_open.
+    IF sy-subrc NE 0.
+      CLEAR lv_commit.
+    ENDIF.
+    DELETE zte2fi0006 FROM TABLE lt_del_open.
+    IF sy-subrc NE 0.
+      CLEAR lv_commit.
+    ENDIF.
+  ENDIF.
+  LOOP AT gt_deposit ASSIGNING FIELD-SYMBOL(&lt;fs_upd&gt;) WHERE status = &#x27;N&#x27;
+                                                        AND d_amt = 0.
+    CLEAR ls_deposit_upd.
+    &lt;fs_upd&gt;-status = &#x27;S&#x27;.
+    &lt;fs_upd&gt;-message = TEXT-m01.      &quot; 성공 메시지
+    READ TABLE lt_fi_head INTO DATA(ls_head_map) WITH KEY = &lt;fs_upd&gt;-seq_no.
+    IF sy-subrc NE 0.
+      &lt;fs_upd&gt;-belnr = ls_head_map-belnr.
+    ENDIF.
+    MOVE-CORRESPONDING &lt;fs_upd&gt; TO ls_deposit_upd.
+    APPEND ls_deposit_upd TO lt_deposit_upd.
+  ENDLOOP.
+  IF lt_deposit_upd IS NOT INITIAL.
+    UPDATE zte2fi0012 FROM TABLE lt_deposit_upd.
+    IF sy-subrc NE 0.
+      CLEAR lv_commit.
+    ENDIF.
+  ENDIF.
+  IF lv_commit IS NOT INITIAL.      &quot; CRUD에 오류가 없었으면 COMMIT
+    DATA(lv_count) = lines( lt_fi_head ).
+    IF lv_fi_belnr IS INITIAL.
+      MESSAGE s000 WITH |반제할 대상이 없습니다|.
+    ELSE.
+      MESSAGE s000 WITH |반제 처리 완료. 마지막 전표: { lv_fi_belnr }. 처리건 수: { lv_count }|.
+    ENDIF.
+    COMMIT WORK AND WAIT.
+  ELSE.
+    DATA(lv_err_cnt) = lines( gt_error_log ).
+    MESSAGE s000 WITH |반제 처리 실패. ({ lv_err_cnt }건의 데이터 에러 발생)| DISPLAY LIKE &#x27;I&#x27;.
+    ROLLBACK WORK.
+  ENDIF.
+ELSEIF pv_simul = &#x27;X&#x27;.
+  LOOP AT gt_deposit ASSIGNING FIELD-SYMBOL(&lt;fs_sim_upd&gt;)
+                                      WHERE status = &#x27;N&#x27;
+                                        AND d_amt = 0.
+    &lt;fs_sim_upd&gt;-status = &#x27;S&#x27;.
+    &lt;fs_sim_upd&gt;-message = &#x27;시뮬레이션 완료&#x27;.
+  ENDLOOP.
+  MESSAGE s000 WITH |시뮬레이션 완료. 일괄 반제 확정을 누르면 반제가 확정됩니다|.
+ENDIF.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">05</span><div><h4>연체 고객에게 독촉 메일과 PDF 발송</h4><p>선택한 고객의 연체 내역으로 독촉장을 생성하고 PDF를 메일에 첨부합니다. 안내 본문과 명세서를 함께 전달해 청구 금액과 입금 정보를 확인할 수 있게 구성했습니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-dunning-17h14m12s714-hd.png" data-caption="독촉 메일 수신 화면" aria-label="독촉 메일 수신 화면 확대"><img src="assets/abap-ar-dunning-17h14m12s714-hd.png" alt="독촉 메일 수신 화면" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>독촉 메일 수신 화면</h4><p>생성된 안내 메일에서 청구 금액과 입금 정보를 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 2장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-dunning-17h13m21s791-hd.png" data-caption="독촉 대상 선택과 발송" aria-label="독촉 대상 선택과 발송 확대"><img src="assets/abap-ar-dunning-17h13m21s791-hd.png" alt="독촉 대상 선택과 발송" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>독촉 대상 선택과 발송</h4><p>거래처 목록에서 연체 고객을 선택해 독촉 메일을 발송합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-dunning-17h15m11s317-hd.png" data-caption="자동 생성된 독촉장 PDF" aria-label="자동 생성된 독촉장 PDF 확대"><img src="assets/abap-ar-dunning-17h15m11s317-hd.png" alt="자동 생성된 독촉장 PDF" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>자동 생성된 독촉장 PDF</h4><p>메일에 첨부된 PDF에서 전표별 연체 내역과 금액을 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A26"><summary>독촉장 PDF 첨부와 BCS 메일 발송<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="독촉장 PDF 첨부와 BCS 메일 발송 코드"><code>TRY.
+    DATA(lo_send_request) = cl_bcs=&gt;create_persistent( ).
+    lv_subject = |[FRESHUB] 미결 대금 결제 촉구 안내 (문서번호: { lv_spono })|.
+    DATA(lo_document) = cl_document_bcs=&gt;create_document(
+                          i_type    = &#x27;HTM&#x27;
+                          i_subject = lv_subject
+                          i_text    = lt_body ).
+    IF lt_solix IS NOT INITIAL.
+      DATA: lv_att_sub TYPE so_obj_des.
+      lv_att_sub = |청구서_{ ls_bp_info-company }.pdf|.
+      lo_document-&gt;add_attachment(
+        EXPORTING
+          i_attachment_type    = &#x27;PDF&#x27;
+          i_attachment_subject = lv_att_sub
+          i_attachment_size    = lv_pdf_size
+          i_att_content_hex    = lt_solix ).
+    ENDIF.
+    lo_send_request-&gt;set_document( lo_document ).
+    DATA(lo_recipient) = cl_cam_address_bcs=&gt;create_internet_address( lv_email ).
+    lo_send_request-&gt;add_recipient(
+      EXPORTING
+        i_recipient = lo_recipient
+        i_express   = &#x27;X&#x27; ).
+    lo_send_request-&gt;set_send_immediately( &#x27;X&#x27; ).
+    lo_send_request-&gt;send( ).
+    COMMIT WORK.
+    MESSAGE &#x27;독촉 메일 및 PDF 첨부 발송이 완료되었습니다.&#x27; TYPE &#x27;S&#x27;.
+  CATCH cx_bcs INTO DATA(lx_bcs).
+    DATA(lv_err_msg) = lx_bcs-&gt;get_text( ).
+    MESSAGE lv_err_msg TYPE &#x27;E&#x27; DISPLAY LIKE &#x27;I&#x27;.
+ENDTRY.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">06</span><div><h4>채권·예금 전표에서 원인 문서까지 추적</h4><p>채권 또는 예금의 전표번호를 누르면 전표 조회 프로그램으로 연결됩니다. 전표 헤더·아이템을 확인하고 관련 대금청구문서를 팝업으로 조회합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-document-17h05m46s962-hd.png" data-caption="채권 전표의 헤더와 아이템" aria-label="채권 전표의 헤더와 아이템 확대"><img src="assets/abap-ar-document-17h05m46s962-hd.png" alt="채권 전표의 헤더와 아이템" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>채권 전표의 헤더와 아이템</h4><p>반제 화면의 전표번호에서 전표 조회 프로그램으로 이동한 결과입니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 3장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-document-17h04m58s478-hd.png" data-caption="채권 전표번호 선택" aria-label="채권 전표번호 선택 확대"><img src="assets/abap-ar-document-17h04m58s478-hd.png" alt="채권 전표번호 선택" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>채권 전표번호 선택</h4><p>미결채권 그리드의 전표번호로 해당 전표를 조회합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-document-17h07m14s076-hd.png" data-caption="대금청구문서 팝업" aria-label="대금청구문서 팝업 확대"><img src="assets/abap-ar-document-17h07m14s076-hd.png" alt="대금청구문서 팝업" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>대금청구문서 팝업</h4><p>참조문서를 통해 전표의 원인이 된 청구 품목을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-ar-document-17h09m58s733-hd.png" data-caption="예금 전표의 아이템 조회" aria-label="예금 전표의 아이템 조회 확대"><img src="assets/abap-ar-document-17h09m58s733-hd.png" alt="예금 전표의 아이템 조회" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>예금 전표의 아이템 조회</h4><p>예금 내역에 연결된 전표의 계정과 차대변 금액을 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A09"><summary>전표번호를 이용한 상세 조회 연결<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="전표번호를 이용한 상세 조회 연결 코드"><code>FORM handle_hotspot_posting_ar  USING ps_row TYPE lvc_s_row
                                       ps_col TYPE lvc_s_col.
   IF ps_row-rowtype IS NOT INITIAL.
     EXIT.
@@ -235,6 +332,175 @@ LOOP AT gt_aropen ASSIGNING FIELD-SYMBOL(&lt;fs_open&gt;)
   IF sy-subrc NE 0.
     EXIT.
   ENDIF.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">07</span><div><h4>전표 유형별 조회와 아이템 확인</h4><p>전체·일반·역분개 전표를 구분하고 전표 유형과 기간으로 조회합니다. 헤더에서 전표를 선택하면 아래 그리드에 아이템이 표시되어 계정과 차대변 금액을 확인할 수 있습니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-document-query-16h46m50s089-hd.png" data-caption="전표 헤더와 아이템 조회" aria-label="전표 헤더와 아이템 조회 확대"><img src="assets/abap-document-query-16h46m50s089-hd.png" alt="전표 헤더와 아이템 조회" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>전표 헤더와 아이템 조회</h4><p>상단 목록에서 선택한 전표의 계정별 금액을 하단에 표시합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 3장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-document-query-16h45m23s650-hd.png" data-caption="총계정원장 전체전표 조회 조건" aria-label="총계정원장 전체전표 조회 조건 확대"><img src="assets/abap-document-query-16h45m23s650-hd.png" alt="총계정원장 전체전표 조회 조건" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>총계정원장 전체전표 조회 조건</h4><p>전표 유형과 조회 기간, 전체전표 모드를 지정합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-document-query-16h53m03s713-hd.png" data-caption="자재 출고 일반전표 조회" aria-label="자재 출고 일반전표 조회 확대"><img src="assets/abap-document-query-16h53m03s713-hd.png" alt="자재 출고 일반전표 조회" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>자재 출고 일반전표 조회</h4><p>일반전표 모드에서 자재 출고 전표를 조회합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-document-query-16h56m18s669-hd.png" data-caption="전표 아이템의 차대변 합계" aria-label="전표 아이템의 차대변 합계 확대"><img src="assets/abap-document-query-16h56m18s669-hd.png" alt="전표 아이템의 차대변 합계" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>전표 아이템의 차대변 합계</h4><p>조회한 아이템의 차변·대변 합계를 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A27"><summary>선택 전표와 역분개 연결 아이템 조회<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0001 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="선택 전표와 역분개 연결 아이템 조회 코드"><code>FORM hotspot_col USING pv_bukrs
+                       pv_gjahr
+                       pv_postnum
+                       pv_rev_mark TYPE mark.
+  DATA : pv_orgn_belnr TYPE zte2fi0002-belnr.
+  CLEAR   : gs_item.
+  REFRESH : gt_item.
+  IF pv_rev_mark IS NOT INITIAL.
+    PERFORM get_rev USING pv_bukrs pv_gjahr pv_postnum
+                    CHANGING pv_orgn_belnr.
+  ENDIF.
+  SELECT a~waers
+         b~belnr b~buzei b~shkzg b~bschl b~hkont b~wrbtr b~wmwst b~mwskz b~kostl b~aufnr
+         c~txt50
+    INTO CORRESPONDING FIELDS OF TABLE gt_item
+    FROM zte2fi0002 AS a
+   INNER JOIN zte2fi0003 AS b
+      ON a~belnr = b~belnr
+     AND a~bukrs = b~bukrs
+     AND a~gjahr = b~gjahr
+    LEFT OUTER JOIN zte2fi0001 AS c
+      ON b~hkont = c~saknr
+   WHERE a~bukrs EQ pv_bukrs
+     AND a~gjahr EQ pv_gjahr
+     AND ( b~belnr EQ pv_postnum
+        OR b~belnr EQ pv_orgn_belnr ).
+  IF sy-subrc NE 0.
+    MESSAGE s001.
+    LEAVE LIST-PROCESSING.
+  ENDIF.
+  LOOP AT gt_item ASSIGNING FIELD-SYMBOL(&lt;fs_wrbtr&gt;).
+    CASE &lt;fs_wrbtr&gt;-shkzg.
+      WHEN &#x27;S&#x27;.
+        &lt;fs_wrbtr&gt;-wrbtr_s = &lt;fs_wrbtr&gt;-wrbtr.
+        &lt;fs_wrbtr&gt;-shkzg_txt = &#x27;차변&#x27;.
+      WHEN &#x27;H&#x27;.
+        &lt;fs_wrbtr&gt;-wrbtr_h = &lt;fs_wrbtr&gt;-wrbtr.
+        &lt;fs_wrbtr&gt;-shkzg_txt = &#x27;대변&#x27;.
+    ENDCASE.
+  ENDLOOP.
+  SORT gt_item BY belnr ASCENDING buzei ASCENDING.
+  CALL METHOD gcl_grid_item-&gt;refresh_table_display
+    EXPORTING
+      is_stable = gs_stable.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">08</span><div><h4>참조번호로 업무 문서 확인</h4><p>판매오더와 자재이동문서의 번호를 누르면 관련 내역이 팝업으로 표시됩니다. 전표가 발생한 업무 기록을 같은 화면에서 추적합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reference-16h54m38s638-hd.png" data-caption="자재이동문서 팝업" aria-label="자재이동문서 팝업 확대"><img src="assets/abap-document-reference-16h54m38s638-hd.png" alt="자재이동문서 팝업" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>자재이동문서 팝업</h4><p>참조문서번호로 해당 자재 이동의 품목·수량·금액을 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 1장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reference-16h54m21s302-hd.png" data-caption="판매오더문서 팝업" aria-label="판매오더문서 팝업 확대"><img src="assets/abap-document-reference-16h54m21s302-hd.png" alt="판매오더문서 팝업" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>판매오더문서 팝업</h4><p>참조번호로 전표와 연결된 판매오더의 품목을 조회합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A28"><summary>참조문서 유형별 팝업 연결<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0001 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="참조문서 유형별 팝업 연결 코드"><code>FORM handle_hotspot  USING ps_row TYPE lvc_s_row
+                           ps_col TYPE lvc_s_col.
+  DATA : lt_matmov    TYPE ztte2fi0002,
+         ls_matmov    LIKE LINE OF lt_matmov,
+         ls_refsod    TYPE zcds_e2_fi_0004,
+         lt_refsod    LIKE TABLE OF ls_refsod,
+         ls_refprd    TYPE zcds_e2_fi_0005,
+         lt_refprd    LIKE TABLE OF ls_refprd,
+         lv_prefix(3).
+  CLEAR   : ls_matmov, lv_prefix, ls_refsod.
+  REFRESH : lt_matmov, lt_refsod.
+  IF ps_row-rowtype IS NOT INITIAL.
+    EXIT.
+  ENDIF.
+  READ TABLE gt_header INTO gs_header INDEX ps_row-index.
+  IF sy-subrc NE 0.
+    EXIT.
+  ENDIF.
+  CASE ps_col-fieldname.
+    WHEN &#x27;BELNR&#x27;.
+      PERFORM hotspot_col USING gs_header-bukrs
+                                gs_header-gjahr
+                                gs_header-belnr
+                                &#x27; &#x27;.
+    WHEN &#x27;STBLG&#x27;.
+      IF gs_header-stblg IS NOT INITIAL.
+        PERFORM hotspot_col USING gs_header-bukrs
+                                gs_header-gjahr
+                                gs_header-stblg
+                                &#x27;X&#x27;.
+      ENDIF.
+    WHEN &#x27;LFBNR&#x27;. &quot; 자재이동문서 팝업 (프로그램명이 ZRE2FI0007이라 가정)
+      CLEAR lv_prefix.
+      lv_prefix = gs_header-lfbnr+0(3). &quot; 첫번째로부터 3글자 길이
+      CASE lv_prefix.
+        WHEN &#x27;MOV&#x27;.
+          gv_popup_mode = &#x27;M&#x27;.
+          PERFORM hotspot_mm USING gs_header-bukrs
+                                   gs_header-gjahr
+                                   gs_header-lfbnr
+                          CHANGING lt_matmov.
+          PERFORM html_popup USING lt_matmov ls_matmov.
+      ENDCASE.
+    WHEN &#x27;XBLNR&#x27;.   &quot; 참조문서 팝업
+      CLEAR lv_prefix.
+      lv_prefix = gs_header-xblnr(3).
+      CASE lv_prefix.
+        WHEN &#x27;SOD&#x27;.     &quot; 판매오더 문서
+          gv_popup_mode = &#x27;S&#x27;.
+          PERFORM hotspot_sod USING gs_header-bukrs
+                                    gs_header-gjahr
+                                    gs_header-xblnr.
+        WHEN &#x27;PRD&#x27;.     &quot; 생산오더
+          gv_popup_mode = &#x27;P&#x27;.
+          PERFORM hotspot_prd USING gs_header-bukrs
+                                    gs_header-gjahr
+                                    gs_header-xblnr.
+        WHEN &#x27;BIL&#x27;.   &quot; 대금청구
+          gv_popup_mode = &#x27;B&#x27;.
+          PERFORM hotspot_bil USING gs_header-xblnr.
+        WHEN &#x27;RCT&#x27;.   &quot; 매출채권 반제 (영수증)
+          gv_popup_mode = &#x27;R&#x27;.
+          PERFORM hotspot_rct USING gs_header-belnr
+                                    gs_header-xblnr.
+      ENDCASE.
+  ENDCASE.
+  IF sy-subrc NE 0.
+    EXIT.
+  ENDIF.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">09</span><div><h4>역분개 후 원본과 취소 전표 비교</h4><p>선택한 전표를 확인 후 역분개하고 원본·역분개 전표를 함께 추적합니다. 취소된 원본과 새 역분개 전표는 서로 다른 상태 아이콘으로 구분하며, 소계와 합계로 차대변 금액을 비교합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reversal-16h48m46s537-hd.png" data-caption="원본·역분개 전표와 차대변 비교" aria-label="원본·역분개 전표와 차대변 비교 확대"><img src="assets/abap-document-reversal-16h48m46s537-hd.png" alt="원본·역분개 전표와 차대변 비교" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>원본·역분개 전표와 차대변 비교</h4><p>역분개 전표번호를 눌러 연결된 아이템을 함께 조회하고 소계·합계를 비교합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 4장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reversal-16h47m38s102-hd.png" data-caption="역분개 실행 확인" aria-label="역분개 실행 확인 확대"><img src="assets/abap-document-reversal-16h47m38s102-hd.png" alt="역분개 실행 확인" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>역분개 실행 확인</h4><p>선택한 전표의 역분개 여부를 확인하는 팝업입니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reversal-16h47m47s621-hd.png" data-caption="역분개 완료 결과" aria-label="역분개 완료 결과 확대"><img src="assets/abap-document-reversal-16h47m47s621-hd.png" alt="역분개 완료 결과" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>역분개 완료 결과</h4><p>생성된 역분개 전표와 처리 메시지를 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reversal-16h59m30s449-hd.png" data-caption="역분개 전표의 상태 구분" aria-label="역분개 전표의 상태 구분 확대"><img src="assets/abap-document-reversal-16h59m30s449-hd.png" alt="역분개 전표의 상태 구분" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>역분개 전표의 상태 구분</h4><p>취소된 원본은 노란색, 역분개 전표는 빨간색 아이콘으로 구분됩니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-document-reversal-17h00m22s242-hd.png" data-caption="연결 아이템 합계 확인" aria-label="연결 아이템 합계 확인 확대"><img src="assets/abap-document-reversal-17h00m22s242-hd.png" alt="연결 아이템 합계 확인" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>연결 아이템 합계 확인</h4><p>원본과 역분개 전표의 연결 관계 및 차대변 금액을 검토합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A29"><summary>역분개 전표 구성과 처리<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0001 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="역분개 전표 구성과 처리 코드"><code>FORM execute_reversal USING ps_header LIKE gs_header.
+  DATA : lv_fi_belnr   TYPE zte2fi0002-belnr,    &quot; 전표번호
+         lt_fi_head    TYPE TABLE OF zte2fi0002, &quot; DB INSERT용 플랫 테이블
+         lt_fi_item    TYPE TABLE OF zte2fi0003, &quot; DB INSERT용 플랫 테이블
+         lt_docs       TYPE gtt_fi_doc,          &quot; 딥 테이블
+         ls_docs       TYPE zse2fi0004,
+         ls_header     LIKE gs_header,
+         ls_rev_header TYPE zte2fi0002,
+         lt_rev_item   TYPE TABLE OF zte2fi0003.
+  CLEAR   : lv_fi_belnr, ls_header, ls_rev_header.
+  REFRESH : lt_fi_head, lt_fi_item, lt_docs.
+  MOVE-CORRESPONDING ps_header TO ls_rev_header.
+  ls_rev_header-blart     = &#x27;CA&#x27;.
+  ls_rev_header-bldat     = sy-datum.
+  ls_rev_header-budat     = sy-datum.
+  ls_rev_header-stblg     = ps_header-belnr.
+  ls_rev_header-stjah     = ps_header-gjahr.
+  ls_rev_header-stgrd     = &#x27;01&#x27;.                  &quot; 사유 (당기 역분개)
+  ls_rev_header-xreversal = &#x27;1&#x27;.                   &quot; 역분개를 실행하는 전표이므로 1
+  MOVE-CORRESPONDING ls_rev_header TO ls_docs-header.
+  SELECT belnr bukrs gjahr buzei bschl hkont wrbtr shkzg zlsch
+         mwskz wmwst koart anln1 anln2 ktosl sgtxt matnr aufnr kostl
+        INTO CORRESPONDING FIELDS OF TABLE lt_rev_item
+        FROM zte2fi0003
+       WHERE bukrs EQ ls_rev_header-bukrs
+         AND gjahr EQ ls_rev_header-gjahr
+         AND belnr EQ ls_rev_header-belnr.
+  IF sy-subrc NE 0.
+    MESSAGE s000 WITH &#x27;역분개 에러&#x27; DISPLAY LIKE &#x27;E&#x27;.
+    EXIT.
+  ENDIF.
+  MOVE-CORRESPONDING lt_rev_item TO ls_docs-items.
+  APPEND ls_docs TO lt_docs.
+  CALL METHOD zcl_e2_fi_posting=&gt;create_fi_multi_document
+    EXPORTING
+      iv_wrttp      = &#x27;04&#x27;
+    IMPORTING
+      ev_last_belnr = lv_fi_belnr
+      et_fi_head    = lt_fi_head
+      et_fi_item    = lt_fi_item
+      ev_subrc      = DATA(lv_subrc)
+      ev_commit     = DATA(lv_mtd_commit)
+    CHANGING
+      ct_docs       = lt_docs.
+  IF lv_subrc NE 0.
+    MESSAGE s000 WITH &#x27;역분개 에러&#x27; DISPLAY LIKE &#x27;E&#x27;.
+    EXIT.
+  ENDIF.
+  IF lv_mtd_commit IS NOT INITIAL.
+    MESSAGE s000 WITH |역분개 처리 완료. 처리 전표: { lv_fi_belnr }.|.
+    COMMIT WORK AND WAIT.
+    gv_last_rev_belnr = lv_fi_belnr.
+  ELSE.
+    MESSAGE s000 WITH |역분개 처리 실패.|.
+    ROLLBACK WORK.
+  ENDIF.
 ENDFORM.</code></pre></details><details class="feature-code abap-code" id="A10"><summary>역분개 후 새 전표로 ALV 포커스 이동<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0001 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="역분개 후 새 전표로 ALV 포커스 이동 코드"><code>FORM set_rev_scroll .
   DATA : ls_row_id    TYPE lvc_s_row,
          ls_column_id TYPE lvc_s_col,
@@ -249,7 +515,14 @@ ENDFORM.</code></pre></details><details class="feature-code abap-code" id="A10">
         is_row_no    = ls_row_no.
   ENDIF.
   CLEAR gv_last_rev_belnr.
-ENDFORM.</code></pre></details></div></div></section><details class="supporting-evidence"><summary>연결 화면 · 전표 조회 및 역분개</summary><figure class="capture-card"><a class="capture-link" href="assets/abap-document-lookup.png" data-caption="관련 전표 조회" aria-label="관련 전표 조회 확대"><img src="assets/abap-document-lookup.png" alt="관련 전표 조회" width="379" height="264" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>관련 전표 조회</h4><p>전표 헤더와 아이템을 확인하는 연결 화면입니다. 반제와 자산 처리 이후의 전표 추적 기능으로 소개합니다.</p></div></figcaption></figure></details><div class="data-thread"><b>연결 데이터</b><p>입금 FI0012 → 미결채권 FI0006 → 반제채권 FI0008 / 전표 헤더·아이템 FI0002·0003</p><small>전표 조회·역분개는 독립 대표 사례가 아닌 후속 확인·정정 경로입니다.</small></div></article><article class="abap-story" id="abap-assets"><nav class="program-switcher" aria-label="ABAP 프로그램 바로가기"><label for="abap-select-assets">프로그램 바로가기</label><select class="program-select" id="abap-select-assets" data-current="#abap-assets"><option value="#abap-receivables">FI 채권 관리</option><option value="#abap-assets" selected>자산·비용 처리</option><option value="#abap-allocation">CO 배부·결산</option><option value="#abap-reporting">분석·보고</option></select><a href="#abap">ABAP 프로젝트 ↑</a></nav><div class="abap-story-head"><span class="eyebrow">ABAP / 02 · 연계 사례</span><h3>자산·비용 처리</h3><p>발생한 비용을 계산하고 전표·집계와 조회 화면으로 연결합니다.</p></div><ol class="business-flow"><li><span>01</span>기초 데이터 조회</li><li><span>02</span>감가상각·급여 계산</li><li><span>03</span>테스트 결과 확인</li><li><span>04</span>전표·원가 반영</li><li><span>05</span>이력 조회</li></ol><section class="feature-pair"><div class="feature-heading"><span class="feature-order">01</span><div><h4>감가상각을 계산하고 전기 전 검토</h4><p>내용연수와 비망가액으로 감가상각비를 계산하고, 자산 유형의 계정 결정 룰을 적용합니다. 테스트 실행으로 계산 결과를 먼저 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-depreciation.png" data-caption="감가상각 테스트 결과" aria-label="감가상각 테스트 결과 확대"><img src="assets/abap-depreciation.png" alt="감가상각 테스트 결과" width="500" height="388" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>감가상각 테스트 결과</h4><p>계산 결과와 비용·누계액 계정이 표시된 테스트 모드 화면입니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A11"><summary>감가상각 계산과 계정 결정<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0008 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="감가상각 계산과 계정 결정 코드"><code>FORM calculate_depreciation .
+ENDFORM.</code></pre></details><details class="feature-code abap-code" id="A30"><summary>전표별 소계 설정<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0001 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="전표별 소계 설정 코드"><code>FORM set_sort_item .
+  REFRESH gt_sort.
+  CLEAR gs_sort.
+  gs_sort-fieldname = &#x27;BELNR&#x27;. &quot; 기준 필드
+  gs_sort-up        = &#x27;X&#x27;.     &quot; 오름차순
+  gs_sort-subtot    = &#x27;X&#x27;.     &quot; 소계(Subtotal) 활성화
+  APPEND gs_sort TO gt_sort.
+ENDFORM.</code></pre></details></div></div></section><div class="data-thread"><b>연결 데이터</b><p>입금 FI0012 → 미결채권 FI0006 → 반제채권 FI0008 / 전표 헤더·아이템 FI0002·0003</p><small>전표 조회·역분개는 독립 대표 사례가 아닌 후속 확인·정정 경로입니다.</small></div></article><article class="abap-story" id="abap-assets"><nav class="program-switcher" aria-label="ABAP 프로그램 바로가기"><label for="abap-select-assets">프로그램 바로가기</label><select class="program-select" id="abap-select-assets" data-current="#abap-assets"><option value="#abap-receivables">FI 채권 관리</option><option value="#abap-assets" selected>자산·비용 처리</option><option value="#abap-allocation">CO 배부·결산</option><option value="#abap-reporting">분석·보고</option></select><a href="#abap">ABAP 프로젝트 ↑</a></nav><div class="abap-story-head"><span class="eyebrow">ABAP / 02 · 연계 사례</span><h3>자산·비용 처리</h3><p>발생한 비용을 계산하고 전표·집계와 조회 화면으로 연결합니다.</p></div><ol class="business-flow"><li><span>01</span>기초 데이터 조회</li><li><span>02</span>감가상각·급여 계산</li><li><span>03</span>테스트 결과 확인</li><li><span>04</span>전표·원가 반영</li><li><span>05</span>이력 조회</li></ol><section class="feature-pair"><div class="feature-heading"><span class="feature-order">01</span><div><h4>감가상각을 계산하고 전기 전 검토</h4><p>내용연수와 비망가액으로 감가상각비를 계산하고, 자산 유형의 계정 결정 룰을 적용합니다. 테스트 실행으로 계산 결과를 먼저 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-depreciation.png" data-caption="감가상각 테스트 결과" aria-label="감가상각 테스트 결과 확대"><img src="assets/abap-depreciation.png" alt="감가상각 테스트 결과" width="500" height="388" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>감가상각 테스트 결과</h4><p>계산 결과와 비용·누계액 계정이 표시된 테스트 모드 화면입니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A11"><summary>감가상각 계산과 계정 결정<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0008 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="감가상각 계산과 계정 결정 코드"><code>FORM calculate_depreciation .
   DATA: lv_total_months TYPE i,
         lv_dep_amt      TYPE zte2fi0003-wrbtr.
   REFRESH gt_alv.
@@ -344,7 +617,220 @@ ENDFORM.</code></pre></details></div></div></section><section class="feature-pai
     ENDIF.
     APPEND gs_alv TO gt_alv.
   ENDLOOP.
-ENDFORM.</code></pre></details></div></div></section></article><article class="abap-story" id="abap-allocation"><nav class="program-switcher" aria-label="ABAP 프로그램 바로가기"><label for="abap-select-allocation">프로그램 바로가기</label><select class="program-select" id="abap-select-allocation" data-current="#abap-allocation"><option value="#abap-receivables">FI 채권 관리</option><option value="#abap-assets">자산·비용 처리</option><option value="#abap-allocation" selected>CO 배부·결산</option><option value="#abap-reporting">분석·보고</option></select><a href="#abap">ABAP 프로젝트 ↑</a></nav><div class="abap-story-head"><span class="eyebrow">ABAP / 03 · 대표 사례</span><h3>CO 배부·결산</h3><p>배부 과정을 확인하고, 검토한 결과를 결산으로 연결합니다.</p></div><ol class="business-flow"><li><span>01</span>코스트센터·SKF 준비</li><li><span>02</span>배부 규칙 확인</li><li><span>03</span>단계별 시뮬레이션</li><li><span>04</span>결과 검토·확정</li><li><span>05</span>결산 상태 반영</li></ol><div class="business-context"><b>공통 비용이 어느 부서로, 어떤 근거로 배부되는가?</b><p>코스트센터와 SKF를 준비하고 센더·리시버 규칙에 따라 비용을 배부합니다. 결과 금액뿐 아니라 각 단계의 기준과 누적 금액을 확인하도록 구성했습니다.</p><div class="tags"><span>SAPMZE2CO0001 · 코스트센터</span><span>SAPMZE2CO0003 · SKF</span><span>ZRE2CO0005 · 배부</span></div></div><section class="feature-pair"><div class="feature-heading"><span class="feature-order">01</span><div><h4>배부 조건과 실행 모드 선택</h4><p>관리회계영역·회계연도·기간·금액 유형을 지정합니다. 금액 유형의 검색 도움말에서 계획·실제를 선택하고, 배부 취소 여부로 실행 모드를 구분합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-selection-hd.png" data-caption="배부 실행 조건" aria-label="배부 실행 조건 확대"><img src="assets/abap-allocation-selection-hd.png" alt="배부 실행 조건" width="1657" height="929" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 실행 조건</h4><p>관리회계영역 1000, 2026년 6월, 실제 금액 유형을 선택한 화면입니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>검색 도움말 보기 · 1장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-value-help-hd.png" data-caption="금액 유형 검색 도움말" aria-label="금액 유형 검색 도움말 확대"><img src="assets/abap-allocation-value-help-hd.png" alt="금액 유형 검색 도움말" width="1660" height="931" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>금액 유형 검색 도움말</h4><p>계획(01)과 실제(04)의 코드와 설명을 함께 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A17"><summary>조회 조건의 DDIC 타입 지정<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="조회 조건의 DDIC 타입 지정 코드"><code>SELECTION-SCREEN BEGIN OF BLOCK bl1 WITH FRAME TITLE TEXT-t01.
+ENDFORM.</code></pre></details></div></div></section></article><article class="abap-story" id="abap-allocation"><nav class="program-switcher" aria-label="ABAP 프로그램 바로가기"><label for="abap-select-allocation">프로그램 바로가기</label><select class="program-select" id="abap-select-allocation" data-current="#abap-allocation"><option value="#abap-receivables">FI 채권 관리</option><option value="#abap-assets">자산·비용 처리</option><option value="#abap-allocation" selected>CO 배부·결산</option><option value="#abap-reporting">분석·보고</option></select><a href="#abap">ABAP 프로젝트 ↑</a></nav><div class="abap-story-head"><span class="eyebrow">ABAP / 03 · 대표 사례</span><h3>CO 배부·결산</h3><p>배부 과정을 확인하고, 검토한 결과를 결산으로 연결합니다.</p></div><ol class="business-flow"><li><span>01</span>코스트센터·SKF 준비</li><li><span>02</span>배부 규칙 확인</li><li><span>03</span>단계별 시뮬레이션</li><li><span>04</span>결과 검토·확정</li><li><span>05</span>결산 상태 반영</li></ol><div class="business-context"><b>공통 비용이 어느 부서로, 어떤 근거로 배부되는가?</b><p>코스트센터와 SKF를 준비하고 센더·리시버 규칙에 따라 비용을 배부합니다. 결과 금액뿐 아니라 각 단계의 기준과 누적 금액을 확인하도록 구성했습니다.</p><div class="tags"><span>SAPMZE2CO0001 · 코스트센터</span><span>SAPMZE2CO0003 · SKF</span><span>ZRE2CO0005 · 배부</span></div></div><section class="feature-pair"><div class="feature-heading"><span class="feature-order">01</span><div><h4>배부 기준이 되는 SKF 마스터 관리</h4><p>통계 지표의 코드·명칭·단위를 등록하고 조회·삭제합니다. 면적(AREA), 시간(HOURS), 컴퓨터 대수(COMP), 직원 수(EMP) 등 비용 배부의 기준을 관리합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-master-17h35m30s854-hd.png" data-caption="면적 지표 생성 결과" aria-label="면적 지표 생성 결과 확대"><img src="assets/abap-skf-master-17h35m30s854-hd.png" alt="면적 지표 생성 결과" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>면적 지표 생성 결과</h4><p>AREA 지표와 M2 단위를 등록한 뒤 SKF 목록에서 결과를 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 3장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-master-17h33m45s775-hd.png" data-caption="SKF 생성 입력" aria-label="SKF 생성 입력 확대"><img src="assets/abap-skf-master-17h33m45s775-hd.png" alt="SKF 생성 입력" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>SKF 생성 입력</h4><p>통계 지표 AREA, 지표 명칭 면적, 단위 M2를 입력합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-master-17h36m54s242-hd.png" data-caption="SKF 마스터 삭제" aria-label="SKF 마스터 삭제 확대"><img src="assets/abap-skf-master-17h36m54s242-hd.png" alt="SKF 마스터 삭제" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>SKF 마스터 삭제</h4><p>선택한 지표를 삭제한 뒤 목록의 변화를 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-master-17h36m15s701-hd.png" data-caption="명칭으로 지표 조회" aria-label="명칭으로 지표 조회 확대"><img src="assets/abap-skf-master-17h36m15s701-hd.png" alt="명칭으로 지표 조회" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>명칭으로 지표 조회</h4><p>시간을 검색하면 HOURS 지표가 조회됩니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A20"><summary>SKF 필수값 검사와 저장<span>코드 보기</span></summary><div class="abap-code-meta">SAPMZE2CO0003 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="SKF 필수값 검사와 저장 코드"><code>FORM set_skf_ma .
+  DATA : ls_save TYPE zte2co0011.
+  CLEAR ls_save.
+  IF gs_skfma-kokrs IS INITIAL OR
+     gs_skfma-stagr IS INITIAL.
+    MESSAGE s000 WITH TEXT-m01 DISPLAY LIKE &#x27;E&#x27;.
+    EXIT.
+  ENDIF.
+  CASE &#x27;X&#x27;.
+    WHEN grb_fixed.
+      gs_skfma-stgbz = &#x27;1&#x27;.   &quot; 고정값 저장
+    WHEN grb_total.
+      gs_skfma-stgbz = &#x27;2&#x27;.   &quot; 총계값 저장
+  ENDCASE.
+  MOVE-CORRESPONDING gs_skfma TO ls_save.
+  IF ls_save-erdat IS INITIAL.
+    ls_save-erdat = sy-datum.
+    ls_save-erzet = sy-uzeit.
+    ls_save-ernam = sy-uname.
+  ELSE.
+    ls_save-aedat = sy-datum.
+    ls_save-aezet = sy-uzeit.
+    ls_save-aenam = sy-uname.
+  ENDIF.
+  MODIFY zte2co0011 FROM ls_save.
+  IF sy-dbcnt &gt; 0.
+    COMMIT WORK AND WAIT.
+    PERFORM get_data_ma.
+    PERFORM refresh_ma.
+    MESSAGE s002.
+  ENDIF.
+  PERFORM clear_ma.
+ENDFORM.</code></pre></details><details class="feature-code abap-code" id="A21"><summary>SKF 마스터 삭제와 목록 갱신<span>코드 보기</span></summary><div class="abap-code-meta">SAPMZE2CO0003 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="SKF 마스터 삭제와 목록 갱신 코드"><code>FORM del_skf_ma .
+  READ TABLE gt_skfma INTO DATA(ls_skfma) WITH KEY kokrs = gs_skfma-kokrs
+                                                   stagr = gs_skfma-stagr.
+  IF sy-subrc NE 0.
+    MESSAGE s000 WITH TEXT-m03 DISPLAY LIKE &#x27;E&#x27;.
+    EXIT.
+  ENDIF.
+  DELETE FROM zte2co0011 WHERE kokrs EQ ls_skfma-kokrs
+                           AND stagr EQ ls_skfma-stagr.
+  IF sy-subrc EQ 0.
+    COMMIT WORK AND WAIT.
+    MESSAGE s003.
+  ELSE.
+    ROLLBACK WORK.
+    MESSAGE s005 DISPLAY LIKE &#x27;E&#x27;.
+  ENDIF.
+  PERFORM refresh_ma.
+  PERFORM clear_ma.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">02</span><div><h4>코스트센터별 월별 SKF 실적 조회</h4><p>마스터와 실적 탭을 오가도 검색 조건을 유지합니다. 좌측 트리에서 코스트센터와 월별 실적을 살펴보고, 선택한 코스트센터의 SKF 내역을 우측 그리드에서 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-actual-17h42m56s481-hd.png" data-caption="코스트센터 선택과 상세 연동" aria-label="코스트센터 선택과 상세 연동 확대"><img src="assets/abap-skf-actual-17h42m56s481-hd.png" alt="코스트센터 선택과 상세 연동" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>코스트센터 선택과 상세 연동</h4><p>좌측에서 선택한 코스트센터의 지표별 실적이 우측 목록에 표시됩니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 2장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-actual-17h38m06s341-hd.png" data-caption="탭 전환 후 조회 조건 유지" aria-label="탭 전환 후 조회 조건 유지 확대"><img src="assets/abap-skf-actual-17h38m06s341-hd.png" alt="탭 전환 후 조회 조건 유지" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>탭 전환 후 조회 조건 유지</h4><p>마스터에서 검색한 시간 조건이 실적 탭에서도 유지됩니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-actual-17h40m35s258-hd.png" data-caption="전체 실적과 월별 트리" aria-label="전체 실적과 월별 트리 확대"><img src="assets/abap-skf-actual-17h40m35s258-hd.png" alt="전체 실적과 월별 트리" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>전체 실적과 월별 트리</h4><p>전체 조회로 전환해 코스트센터·지표·월별 실적을 함께 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A22"><summary>트리 선택에 따른 실적 그리드 갱신<span>코드 보기</span></summary><div class="abap-code-meta">SAPMZE2CO0003 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="트리 선택에 따른 실적 그리드 갱신 코드"><code>FORM tree_double_click  USING pv_node_key  TYPE tv_nodekey
+                              pv_fieldname TYPE lvc_fname
+                     CHANGING ps_tree      LIKE gs_skftr.
+  CALL METHOD gcl_tree_tr-&gt;get_outtab_line
+    EXPORTING
+      i_node_key    = pv_node_key
+    IMPORTING
+      e_outtab_line = ps_tree.
+  gv_findkos = ps_tree-kostl.
+  gs_sel-stagr = ps_tree-stagr.
+  IF ps_tree-kostl IS INITIAL.
+    MESSAGE s000 WITH &#x27;존재하지 않는 코스트센터입니다.&#x27; DISPLAY LIKE &#x27;E&#x27;.
+    EXIT.
+  ELSE.
+    PERFORM set_grid_kostl.     &quot; 그리드 코스트센터 검색 (추후 메서드 호출로 구현)
+    PERFORM refresh_tr.
+    PERFORM get_data_tr.
+    PERFORM set_grid_kostl.
+    PERFORM refresh_tr.
+    PERFORM gv_mark.
+  ENDIF.
+  IF ps_tree-node_level &lt; 2.
+    CLEAR ps_tree.
+    IF gv_mark IS INITIAL.
+      MESSAGE s000 WITH TEXT-m10.
+      EXIT.
+    ENDIF.
+  ENDIF.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">03</span><div><h4>생산 실적을 HOURS 배부 기준으로 반영</h4><p>연도와 기간으로 PP 생산 실적을 조회해 코스트센터별 작업시간을 집계합니다. 확인 팝업에서 검토한 후 SKF 실적에 반영하고 월별 목록에서 결과를 확인합니다. PP 데이터는 다른 팀원이 구현한 생산 업무와의 연계 대상입니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-production-17h45m34s009-hd.png" data-caption="생산 실적 집계 확인" aria-label="생산 실적 집계 확인 확대"><img src="assets/abap-skf-production-17h45m34s009-hd.png" alt="생산 실적 집계 확인" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>생산 실적 집계 확인</h4><p>2026년 6월의 생산 실적을 코스트센터별 HOURS 값으로 집계한 팝업입니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>상세 화면과 처리 과정 보기 · 3장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-production-17h44m06s718-hd.png" data-caption="반영할 회계연도와 기간 선택" aria-label="반영할 회계연도와 기간 선택 확대"><img src="assets/abap-skf-production-17h44m06s718-hd.png" alt="반영할 회계연도와 기간 선택" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>반영할 회계연도와 기간 선택</h4><p>생산 실적을 가져올 연도와 월을 지정합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-production-17h47m08s982-hd.png" data-caption="생산 실적 반영 결과" aria-label="생산 실적 반영 결과 확대"><img src="assets/abap-skf-production-17h47m08s982-hd.png" alt="생산 실적 반영 결과" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>생산 실적 반영 결과</h4><p>확인 후 SKF 실적 목록과 처리 메시지를 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-skf-production-17h48m21s843-hd.png" data-caption="6월 HOURS 실적 확인" aria-label="6월 HOURS 실적 확인 확대"><img src="assets/abap-skf-production-17h48m21s843-hd.png" alt="6월 HOURS 실적 확인" width="1918" height="1078" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>6월 HOURS 실적 확인</h4><p>월별 트리와 상세 목록에서 생성된 6월 실적을 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A23"><summary>PP 작업시간 집계와 SKF 반영<span>코드 보기</span></summary><div class="abap-code-meta">SAPMZE2CO0003 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="PP 작업시간 집계와 SKF 반영 코드"><code>FORM pull_pp_data .
+  DATA: lv_budat_from TYPE zte2pp0011-iedd,
+        lv_budat_to   TYPE zte2pp0011-iedd.
+  DATA: lt_sval TYPE TABLE OF sval,
+        ls_sval TYPE sval.
+  DATA: lv_returncode TYPE c.
+  CLEAR ls_sval.
+  ls_sval-tabname   = &#x27;ZTE2CO0012&#x27;.
+  ls_sval-fieldname = &#x27;GJAHR&#x27;.
+  ls_sval-field_obl = &#x27;X&#x27;.
+  APPEND ls_sval TO lt_sval.
+  CLEAR ls_sval.
+  ls_sval-tabname   = &#x27;ZTE2CO0012&#x27;.
+  ls_sval-fieldname = &#x27;PERIO&#x27;.
+  ls_sval-field_obl = &#x27;X&#x27;.
+  APPEND ls_sval TO lt_sval.
+  CALL FUNCTION &#x27;POPUP_GET_VALUES&#x27;
+    EXPORTING
+      popup_title     = &#x27;PP 생산실적 가져오기&#x27;
+    IMPORTING
+      returncode      = lv_returncode
+    TABLES
+      fields          = lt_sval
+    EXCEPTIONS
+      error_in_fields = 1
+      OTHERS          = 2.
+  IF sy-subrc &lt;&gt; 0 OR lv_returncode = &#x27;A&#x27;.
+    MESSAGE s000 WITH &#x27;취소되었습니다.&#x27; DISPLAY LIKE &#x27;S&#x27;.
+    EXIT.
+  ENDIF.
+  READ TABLE lt_sval INTO ls_sval WITH KEY fieldname = &#x27;GJAHR&#x27;.
+  gs_skftr-gjahr = ls_sval-value.
+  READ TABLE lt_sval INTO ls_sval WITH KEY fieldname = &#x27;PERIO&#x27;.
+  DATA(lv_month) = CONV i( ls_sval-value ).
+  gs_skftr-perio = |{ lv_month WIDTH = 3 ALIGN = RIGHT PAD = &#x27;0&#x27; }|.
+  lv_budat_from = |{ gs_skftr-gjahr }{ lv_month WIDTH = 2 ALIGN = RIGHT PAD = &#x27;0&#x27; }01|.
+  CALL FUNCTION &#x27;RP_LAST_DAY_OF_MONTHS&#x27;
+    EXPORTING
+      day_in            = lv_budat_from
+    IMPORTING
+      last_day_of_month = lv_budat_to
+    EXCEPTIONS
+      day_in_no_date    = 1
+      OTHERS            = 2.
+  SELECT d~kostl AS kostl,
+         SUM( a~ismnw ) AS msgfb
+    INTO TABLE @DATA(lt_sum)
+    FROM zte2pp0011 AS a
+   INNER JOIN zte2pp0009 AS b ON a~aufnr = b~aufnr
+   INNER JOIN zte2pp0005 AS c ON b~plnnr = c~plnnr AND a~vornr = c~vornr
+   INNER JOIN zte2pp0001 AS d ON c~arbpl = d~arbpl
+   WHERE a~iedd BETWEEN @lv_budat_from AND @lv_budat_to
+     AND d~kostl IS NOT NULL
+   GROUP BY d~kostl.
+  IF sy-subrc &lt;&gt; 0.
+    MESSAGE s000 WITH &#x27;해당 기간의 PP 실적 데이터가 없습니다.&#x27;.
+    EXIT.
+  ENDIF.
+  DATA: lt_popup_data LIKE TABLE OF gs_skftr,
+        ls_popup      LIKE gs_skftr.
+  DATA: lv_default_kokrs TYPE zte2co0012-kokrs.
+  lv_default_kokrs = gs_sel-kokrs.
+  IF lv_default_kokrs IS INITIAL.
+    lv_default_kokrs = &#x27;E200&#x27;.
+  ENDIF.
+  LOOP AT lt_sum INTO DATA(ls_sum).
+    CLEAR ls_popup.
+    ls_popup-kokrs = lv_default_kokrs.
+    ls_popup-gjahr = gs_skftr-gjahr.
+    ls_popup-perio = gs_skftr-perio.
+    ls_popup-kostl = ls_sum-kostl.
+    ls_popup-stagr = &#x27;HOURS&#x27;.
+    ls_popup-msgfb = ls_sum-msgfb / 60.
+    ls_popup-meins = &#x27;H&#x27;.
+    APPEND ls_popup TO lt_popup_data.
+    READ TABLE gt_skftr ASSIGNING FIELD-SYMBOL(&lt;fs_skftr&gt;)
+         WITH KEY kokrs = lv_default_kokrs
+                  gjahr = gs_skftr-gjahr
+                  perio = gs_skftr-perio
+                  kostl = ls_sum-kostl
+                  stagr = &#x27;HOURS&#x27;. &quot; 지표가 HOURS인 건에 대해서만 업데이트
+    IF sy-subrc = 0.
+      &lt;fs_skftr&gt;-msgfb = ls_sum-msgfb / 60.
+      &lt;fs_skftr&gt;-meins = &#x27;H&#x27;.
+    ELSE.
+      APPEND INITIAL LINE TO gt_skftr ASSIGNING &lt;fs_skftr&gt;.
+      &lt;fs_skftr&gt;-kokrs = lv_default_kokrs.
+      &lt;fs_skftr&gt;-gjahr = gs_skftr-gjahr.
+      &lt;fs_skftr&gt;-perio = gs_skftr-perio.
+      &lt;fs_skftr&gt;-kostl = ls_sum-kostl.
+      &lt;fs_skftr&gt;-stagr = &#x27;HOURS&#x27;.
+      &lt;fs_skftr&gt;-msgfb = ls_sum-msgfb / 60.
+      &lt;fs_skftr&gt;-meins = &#x27;H&#x27;.
+    ENDIF.
+  ENDLOOP.
+  gt_skftr_grid = gt_skftr.
+  DATA: lt_fcat  TYPE slis_t_fieldcat_alv,
+        ls_fcat  TYPE slis_fieldcat_alv,
+        lv_exit  TYPE c.
+  CLEAR ls_fcat. ls_fcat-fieldname = &#x27;KOSTL&#x27;. ls_fcat-seltext_m = &#x27;Cost Center&#x27;. ls_fcat-tabname = &#x27;1&#x27;. ls_fcat-outputlen = 12. APPEND ls_fcat TO lt_fcat.
+  CLEAR ls_fcat. ls_fcat-fieldname = &#x27;STAGR&#x27;. ls_fcat-seltext_m = &#x27;Stat.Key Fig&#x27;. ls_fcat-tabname = &#x27;1&#x27;. ls_fcat-outputlen = 12. APPEND ls_fcat TO lt_fcat.
+  CLEAR ls_fcat. ls_fcat-fieldname = &#x27;MSGFB&#x27;. ls_fcat-seltext_m = &#x27;Total Hours&#x27;. ls_fcat-tabname = &#x27;1&#x27;. ls_fcat-outputlen = 15. APPEND ls_fcat TO lt_fcat.
+  CLEAR ls_fcat. ls_fcat-fieldname = &#x27;MEINS&#x27;. ls_fcat-seltext_m = &#x27;Unit&#x27;.        ls_fcat-tabname = &#x27;1&#x27;. ls_fcat-outputlen = 5.  APPEND ls_fcat TO lt_fcat.
+  CALL FUNCTION &#x27;REUSE_ALV_POPUP_TO_SELECT&#x27;
+    EXPORTING
+      i_title               = &#x27;PP Actual Data (Click [V] to Save)&#x27;
+      i_selection           = &#x27; &#x27;
+      i_zebra               = &#x27;X&#x27;
+      i_tabname             = &#x27;1&#x27;
+      i_screen_start_column = 10
+      i_screen_start_line   = 5
+      i_screen_end_column   = 90
+      i_screen_end_line     = 20
+      it_fieldcat           = lt_fcat
+    IMPORTING
+      e_exit                = lv_exit
+    TABLES
+      t_outtab              = lt_popup_data
+    EXCEPTIONS
+      program_error         = 1
+      OTHERS                = 2.
+  IF sy-subrc = 0 AND lv_exit IS INITIAL.
+    PERFORM save_data_tr.
+    PERFORM get_data_tr.
+    PERFORM get_data_trg.
+    PERFORM refresh_tr.
+    IF gcl_tree_tr IS BOUND.
+      CALL METHOD gcl_tree_tr-&gt;delete_all_nodes.
+      PERFORM build_tree_tr.
+      CALL METHOD gcl_tree_tr-&gt;frontend_update.
+    ENDIF.
+    MESSAGE s000 WITH &#x27;PP actual data successfully fetched and saved.&#x27;.
+  ELSE.
+    MESSAGE s000 WITH &#x27;Save cancelled. (Data applied temporarily)&#x27;.
+  ENDIF.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">04</span><div><h4>배부 조건과 실행 모드 선택</h4><p>관리회계영역·회계연도·기간·금액 유형을 지정합니다. 금액 유형의 검색 도움말에서 계획·실제를 선택하고, 배부 취소 여부로 실행 모드를 구분합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-selection-hd.png" data-caption="배부 실행 조건" aria-label="배부 실행 조건 확대"><img src="assets/abap-allocation-selection-hd.png" alt="배부 실행 조건" width="1657" height="929" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 실행 조건</h4><p>관리회계영역 1000, 2026년 6월, 실제 금액 유형을 선택한 화면입니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>검색 도움말 보기 · 1장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-value-help-hd.png" data-caption="금액 유형 검색 도움말" aria-label="금액 유형 검색 도움말 확대"><img src="assets/abap-allocation-value-help-hd.png" alt="금액 유형 검색 도움말" width="1660" height="931" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>금액 유형 검색 도움말</h4><p>계획(01)과 실제(04)의 코드와 설명을 함께 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A17"><summary>조회 조건의 DDIC 타입 지정<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="조회 조건의 DDIC 타입 지정 코드"><code>SELECTION-SCREEN BEGIN OF BLOCK bl1 WITH FRAME TITLE TEXT-t01.
   PARAMETERS : pa_kokrs TYPE zte2co0016-kokrs DEFAULT &#x27;1000&#x27;,
                pa_gjahr TYPE zte2co0016-gjahr DEFAULT &#x27;2026&#x27;,
                pa_perio TYPE zte2co0016-perio DEFAULT sy-datum+4(2),
@@ -358,7 +844,7 @@ SELECTION-SCREEN END OF BLOCK bl1.</code></pre></details><details class="feature
     ENDCASE.
     MODIFY SCREEN.
   ENDLOOP.
-ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">02</span><div><h4>배부 과정을 단계별로 확인</h4><p>트리에서 센더를 선택하면 센더·리시버·누적 배부액을 함께 확인합니다. 전력비·감가상각비의 SKF 배부와 수도광열비의 고정 비율 배부, 전산팀·생산관리부의 2차 배부를 차례로 살펴봅니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-step-hd.png" data-caption="1차 배부 · 전력비" aria-label="1차 배부 · 전력비 확대"><img src="assets/abap-allocation-step-hd.png" alt="1차 배부 · 전력비" width="1658" height="928" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>1차 배부 · 전력비</h4><p>HOURS 기준의 리시버별 배부액과 하단 누적 금액을 함께 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>전체 구조와 나머지 배부 단계 보기 · 5장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-tree-hd.png" data-caption="배부 세그먼트 전체 구조" aria-label="배부 세그먼트 전체 구조 확대"><img src="assets/abap-allocation-tree-hd.png" alt="배부 세그먼트 전체 구조" width="1663" height="930" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 세그먼트 전체 구조</h4><p>실행 전 트리에서 센더·리시버와 배부 기준을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-depreciation-hd.png" data-caption="1차 배부 · 감가상각비" aria-label="1차 배부 · 감가상각비 확대"><img src="assets/abap-allocation-depreciation-hd.png" alt="1차 배부 · 감가상각비" width="1663" height="928" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>1차 배부 · 감가상각비</h4><p>감가상각비를 HOURS 기준으로 배부하고 누적 금액을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-fixed-ratio-hd.png" data-caption="1차 배부 · 수도광열비" aria-label="1차 배부 · 수도광열비 확대"><img src="assets/abap-allocation-fixed-ratio-hd.png" alt="1차 배부 · 수도광열비" width="1662" height="927" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>1차 배부 · 수도광열비</h4><p>고정 비율 90%·10%를 적용한 배부액을 비교합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-it-hd.png" data-caption="2차 배부 · 전산팀" aria-label="2차 배부 · 전산팀 확대"><img src="assets/abap-allocation-it-hd.png" alt="2차 배부 · 전산팀" width="1662" height="929" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>2차 배부 · 전산팀</h4><p>부서별 컴퓨터 대수의 비율(COMP)을 기준으로 전산팀 비용을 배부합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-production-hd.png" data-caption="2차 배부 · 생산관리부" aria-label="2차 배부 · 생산관리부 확대"><img src="assets/abap-allocation-production-hd.png" alt="2차 배부 · 생산관리부" width="1663" height="930" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>2차 배부 · 생산관리부</h4><p>부서별 직원 수의 비율(EMP)을 기준으로 공장장의 인건비를 배부합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A01"><summary>선택한 세그먼트 시뮬레이션<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="선택한 세그먼트 시뮬레이션 코드"><code>FORM simulate_segment USING pv_node_key  TYPE lvc_nkey
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">05</span><div><h4>배부 과정을 단계별로 확인</h4><p>트리에서 센더를 선택하면 센더·리시버·누적 배부액을 함께 확인합니다. 전력비·감가상각비의 SKF 배부와 수도광열비의 고정 비율 배부, 전산팀·생산관리부의 2차 배부를 차례로 살펴봅니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-step-hd.png" data-caption="1차 배부 · 전력비" aria-label="1차 배부 · 전력비 확대"><img src="assets/abap-allocation-step-hd.png" alt="1차 배부 · 전력비" width="1658" height="928" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>1차 배부 · 전력비</h4><p>HOURS 기준의 리시버별 배부액과 하단 누적 금액을 함께 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>전체 구조와 나머지 배부 단계 보기 · 5장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-tree-hd.png" data-caption="배부 세그먼트 전체 구조" aria-label="배부 세그먼트 전체 구조 확대"><img src="assets/abap-allocation-tree-hd.png" alt="배부 세그먼트 전체 구조" width="1663" height="930" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 세그먼트 전체 구조</h4><p>실행 전 트리에서 센더·리시버와 배부 기준을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-depreciation-hd.png" data-caption="1차 배부 · 감가상각비" aria-label="1차 배부 · 감가상각비 확대"><img src="assets/abap-allocation-depreciation-hd.png" alt="1차 배부 · 감가상각비" width="1663" height="928" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>1차 배부 · 감가상각비</h4><p>감가상각비를 HOURS 기준으로 배부하고 누적 금액을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-fixed-ratio-hd.png" data-caption="1차 배부 · 수도광열비" aria-label="1차 배부 · 수도광열비 확대"><img src="assets/abap-allocation-fixed-ratio-hd.png" alt="1차 배부 · 수도광열비" width="1662" height="927" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>1차 배부 · 수도광열비</h4><p>고정 비율 90%·10%를 적용한 배부액을 비교합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-it-hd.png" data-caption="2차 배부 · 전산팀" aria-label="2차 배부 · 전산팀 확대"><img src="assets/abap-allocation-it-hd.png" alt="2차 배부 · 전산팀" width="1662" height="929" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>2차 배부 · 전산팀</h4><p>부서별 컴퓨터 대수의 비율(COMP)을 기준으로 전산팀 비용을 배부합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-production-hd.png" data-caption="2차 배부 · 생산관리부" aria-label="2차 배부 · 생산관리부 확대"><img src="assets/abap-allocation-production-hd.png" alt="2차 배부 · 생산관리부" width="1663" height="930" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>2차 배부 · 생산관리부</h4><p>부서별 직원 수의 비율(EMP)을 기준으로 공장장의 인건비를 배부합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A01"><summary>선택한 세그먼트 시뮬레이션<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="선택한 세그먼트 시뮬레이션 코드"><code>FORM simulate_segment USING pv_node_key  TYPE lvc_nkey
                             pv_fieldname TYPE lvc_fname.
   DATA : ls_node_data LIKE gs_101_tree.
   DATA : lv_value_rule TYPE dd07v-domvalue_l,
@@ -519,7 +1005,7 @@ IF lv_diff NE 0.
       &lt;fs_adj1_sum&gt;-wkg00 = &lt;fs_adj1_sum&gt;-wkg00 + lv_diff.
     ENDIF.
   ENDIF.
-ENDIF.</code></pre></details></div></div></section><aside class="design-note"><b>왜 단계별로 보여주었나</b><p>초기에는 전체 실행 결과만 보여주었습니다. 배부 중 어느 단계에서 금액이 달라지는지 확인할 수 있도록 트리 선택과 세 개의 그리드로 과정을 나눴습니다.</p></aside><section class="feature-pair"><div class="feature-heading"><span class="feature-order">03</span><div><h4>전체 시뮬레이션과 선행 결산 검토</h4><p>전체 배부 결과를 모아 검토하고 선행 결산 단계의 완료 여부를 확인합니다. 시뮬레이션 결과가 표시되어도 배부 단계는 확정 전 상태로 남아 있습니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-simulation-hd.png" data-caption="확정 전 · 배부 단계 미완료" aria-label="확정 전 · 배부 단계 미완료 확대"><img src="assets/abap-allocation-simulation-hd.png" alt="확정 전 · 배부 단계 미완료" width="1666" height="932" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>확정 전 · 배부 단계 미완료</h4><p>선행 단계는 초록색, 배부 사이클은 빨간색으로 표시되며 하단에는 시뮬레이션 금액이 나타납니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>선행 결산 단계 더 보기 · 1장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-prerequisites-hd.png" data-caption="선행 업무의 결산 상태" aria-label="선행 업무의 결산 상태 확대"><img src="assets/abap-allocation-prerequisites-hd.png" alt="선행 업무의 결산 상태" width="1661" height="931" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>선행 업무의 결산 상태</h4><p>영업·구매·생산, 인건비, 입금·반제 등 선행 단계의 상태를 함께 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A19"><summary>실행 모드 분기와 결과 탭 전환<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="실행 모드 분기와 결과 탭 전환 코드"><code>MODULE user_command_0100 INPUT.
+ENDIF.</code></pre></details></div></div></section><aside class="design-note"><b>왜 단계별로 보여주었나</b><p>초기에는 전체 실행 결과만 보여주었습니다. 배부 중 어느 단계에서 금액이 달라지는지 확인할 수 있도록 트리 선택과 세 개의 그리드로 과정을 나눴습니다.</p></aside><section class="feature-pair"><div class="feature-heading"><span class="feature-order">06</span><div><h4>전체 시뮬레이션과 선행 결산 검토</h4><p>전체 배부 결과를 모아 검토하고 선행 결산 단계의 완료 여부를 확인합니다. 시뮬레이션 결과가 표시되어도 배부 단계는 확정 전 상태로 남아 있습니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-simulation-hd.png" data-caption="확정 전 · 배부 단계 미완료" aria-label="확정 전 · 배부 단계 미완료 확대"><img src="assets/abap-allocation-simulation-hd.png" alt="확정 전 · 배부 단계 미완료" width="1666" height="932" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>확정 전 · 배부 단계 미완료</h4><p>선행 단계는 초록색, 배부 사이클은 빨간색으로 표시되며 하단에는 시뮬레이션 금액이 나타납니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>선행 결산 단계 더 보기 · 1장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-prerequisites-hd.png" data-caption="선행 업무의 결산 상태" aria-label="선행 업무의 결산 상태 확대"><img src="assets/abap-allocation-prerequisites-hd.png" alt="선행 업무의 결산 상태" width="1661" height="931" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>선행 업무의 결산 상태</h4><p>영업·구매·생산, 인건비, 입금·반제 등 선행 단계의 상태를 함께 확인합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A19"><summary>실행 모드 분기와 결과 탭 전환<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="실행 모드 분기와 결과 탭 전환 코드"><code>MODULE user_command_0100 INPUT.
   CASE gv_okcode.
     WHEN &#x27;EXEC1&#x27;. &quot; 실행
       CLEAR gv_okcode.
@@ -580,7 +1066,7 @@ ENDIF.</code></pre></details></div></div></section><aside class="design-note"><b
     TYPE &#x27;S&#x27; DISPLAY LIKE &#x27;E&#x27;.
     EXIT.
   ENDIF.
-ENDMETHOD.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">04</span><div><h4>검토한 배부 결과 확정</h4><p>배부 확정으로 원가전표와 코스트센터 집계에 결과를 반영합니다. 화면에서 배부 단계의 완료 상태와 확정 메시지를 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-confirmed-hd.png" data-caption="확정 후 · 배부 완료" aria-label="확정 후 · 배부 완료 확대"><img src="assets/abap-allocation-confirmed-hd.png" alt="확정 후 · 배부 완료" width="1663" height="934" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>확정 후 · 배부 완료</h4><p>배부 사이클이 초록색으로 바뀌고 하단에 배부 계산 및 전표 확정 메시지가 표시됩니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A03"><summary>배부 결과의 CO 전표·집계 반영<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="배부 결과의 CO 전표·집계 반영 코드"><code>FORM save_allocation_data .
+ENDMETHOD.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">07</span><div><h4>검토한 배부 결과 확정</h4><p>배부 확정으로 원가전표와 코스트센터 집계에 결과를 반영합니다. 화면에서 배부 단계의 완료 상태와 확정 메시지를 확인합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-confirmed-hd.png" data-caption="확정 후 · 배부 완료" aria-label="확정 후 · 배부 완료 확대"><img src="assets/abap-allocation-confirmed-hd.png" alt="확정 후 · 배부 완료" width="1663" height="934" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>확정 후 · 배부 완료</h4><p>배부 사이클이 초록색으로 바뀌고 하단에 배부 계산 및 전표 확정 메시지가 표시됩니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A03"><summary>배부 결과의 CO 전표·집계 반영<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="배부 결과의 CO 전표·집계 반영 코드"><code>FORM save_allocation_data .
   DATA: lt_0006          TYPE TABLE OF zte2co0006,
         ls_0006          TYPE zte2co0006,
         lv_belnr_seq     TYPE n LENGTH 10,
@@ -648,7 +1134,7 @@ ENDMETHOD.</code></pre></details></div></div></section><section class="feature-p
       MESSAGE s000 WITH &#x27;CO 전표 생성 중 오류가 발생했습니다.&#x27; DISPLAY LIKE &#x27;E&#x27;.
     ENDIF.
   ENDIF.
-ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">05</span><div><h4>배부 취소 후 상태와 재계산 확인</h4><p>취소 모드에서 기존 배부 내역을 찾아 집계와 액티비티 단가를 복구·초기화하고, 결산 상태를 다시 진행 중으로 변경합니다. 취소 완료 메시지와 비워진 결과를 확인한 뒤 다시 미리보기로 이어집니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancelled-hd.png" data-caption="배부 취소 완료" aria-label="배부 취소 완료 확대"><img src="assets/abap-allocation-cancelled-hd.png" alt="배부 취소 완료" width="1663" height="929" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 취소 완료</h4><p>배부 내역과 액티비티 단가의 초기화 완료 메시지를 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>취소 선택부터 재계산까지 보기 · 4장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancel-option-hd.png" data-caption="취소 모드 선택" aria-label="취소 모드 선택 확대"><img src="assets/abap-allocation-cancel-option-hd.png" alt="취소 모드 선택" width="863" height="405" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>취소 모드 선택</h4><p>선택 화면에서 배부 취소 체크박스를 선택합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancel-action-hd.png" data-caption="배부 취소 실행 화면" aria-label="배부 취소 실행 화면 확대"><img src="assets/abap-allocation-cancel-action-hd.png" alt="배부 취소 실행 화면" width="1661" height="935" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 취소 실행 화면</h4><p>상단의 실행 버튼이 배부 취소로 바뀐 상태입니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancel-status-hd.png" data-caption="취소 후 · 결과와 결산 상태" aria-label="취소 후 · 결과와 결산 상태 확대"><img src="assets/abap-allocation-cancel-status-hd.png" alt="취소 후 · 결과와 결산 상태" width="1663" height="934" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>취소 후 · 결과와 결산 상태</h4><p>결과 목록이 비워지고 배부 사이클은 미완료 상태로 표시됩니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-recalculate-hd.png" data-caption="취소 후 다시 단계별 미리보기" aria-label="취소 후 다시 단계별 미리보기 확대"><img src="assets/abap-allocation-recalculate-hd.png" alt="취소 후 다시 단계별 미리보기" width="1663" height="930" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>취소 후 다시 단계별 미리보기</h4><p>일반 실행 모드에서 전력비 배부액을 다시 계산한 화면입니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A05"><summary>배부 취소와 결산 상태 재개<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="배부 취소와 결산 상태 재개 코드"><code>FORM reverse_allocation  USING p_kokrs.
+ENDFORM.</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">08</span><div><h4>배부 취소 후 상태와 재계산 확인</h4><p>취소 모드에서 기존 배부 내역을 찾아 집계와 액티비티 단가를 복구·초기화하고, 결산 상태를 다시 진행 중으로 변경합니다. 취소 완료 메시지와 비워진 결과를 확인한 뒤 다시 미리보기로 이어집니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancelled-hd.png" data-caption="배부 취소 완료" aria-label="배부 취소 완료 확대"><img src="assets/abap-allocation-cancelled-hd.png" alt="배부 취소 완료" width="1663" height="929" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 취소 완료</h4><p>배부 내역과 액티비티 단가의 초기화 완료 메시지를 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>취소 선택부터 재계산까지 보기 · 4장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancel-option-hd.png" data-caption="취소 모드 선택" aria-label="취소 모드 선택 확대"><img src="assets/abap-allocation-cancel-option-hd.png" alt="취소 모드 선택" width="863" height="405" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>취소 모드 선택</h4><p>선택 화면에서 배부 취소 체크박스를 선택합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancel-action-hd.png" data-caption="배부 취소 실행 화면" aria-label="배부 취소 실행 화면 확대"><img src="assets/abap-allocation-cancel-action-hd.png" alt="배부 취소 실행 화면" width="1661" height="935" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>배부 취소 실행 화면</h4><p>상단의 실행 버튼이 배부 취소로 바뀐 상태입니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-cancel-status-hd.png" data-caption="취소 후 · 결과와 결산 상태" aria-label="취소 후 · 결과와 결산 상태 확대"><img src="assets/abap-allocation-cancel-status-hd.png" alt="취소 후 · 결과와 결산 상태" width="1663" height="934" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>취소 후 · 결과와 결산 상태</h4><p>결과 목록이 비워지고 배부 사이클은 미완료 상태로 표시됩니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-allocation-recalculate-hd.png" data-caption="취소 후 다시 단계별 미리보기" aria-label="취소 후 다시 단계별 미리보기 확대"><img src="assets/abap-allocation-recalculate-hd.png" alt="취소 후 다시 단계별 미리보기" width="1663" height="930" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>취소 후 다시 단계별 미리보기</h4><p>일반 실행 모드에서 전력비 배부액을 다시 계산한 화면입니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A05"><summary>배부 취소와 결산 상태 재개<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2CO0005 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="배부 취소와 결산 상태 재개 코드"><code>FORM reverse_allocation  USING p_kokrs.
   DATA : lt_co0006    TYPE TABLE OF zte2co0006,
          ls_co0006    TYPE zte2co0006,
          lt_co0004    TYPE TABLE OF zte2co0004,
@@ -737,7 +1223,7 @@ ActualCogsAmount,
 @DefaultAggregation: #SUM
 @Semantics.amount.currencyCode: &#x27;Currency&#x27;
 ActualMargin,
-Currency,</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">02</span><div><h4>집계 결과를 재무제표로 확인</h4><p>통합 잔액과 계정 분류를 연결해 재무상태표와 손익계산서에 필요한 데이터를 제공합니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-statements.png" data-caption="재무상태표와 재무구조" aria-label="재무상태표와 재무구조 확대"><img src="assets/abap-financial-statements.png" alt="재무상태표와 재무구조" width="565" height="320" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>재무상태표와 재무구조</h4><p>조회 조건별 자산·부채·자본과 재무상태 검증을 보여주는 화면입니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A15"><summary>잔액과 G/L 계정 분류 연결<span>코드 보기</span></summary><div class="abap-code-meta">ZCDS_E2_FI_0011 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="잔액과 G/L 계정 분류 연결 코드"><code>@Metadata.ignorePropagatedAnnotations: true
+Currency,</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">02</span><div><h4>재무제표 조회·계정 검색·PDF 출력</h4><p>회계연도·기간·통화로 재무상태표와 손익계산서를 조회합니다. 재무구조와 손익 요약을 확인하고 계정 검색으로 상세 항목을 찾으며, PDF 미리보기와 인쇄·저장으로 연결합니다. 옆의 코드는 재무제표에 공급하는 잔액·계정 분류 데이터입니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163201-hd.png" data-caption="재무상태표 요약과 재무구조" aria-label="재무상태표 요약과 재무구조 확대"><img src="assets/abap-financial-20260930163201-hd.png" alt="재무상태표 요약과 재무구조" width="1710" height="1010" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>재무상태표 요약과 재무구조</h4><p>자산·부채·자본 합계와 재무상태 검증, 재무구조 비율을 확인합니다.</p></div></figcaption></figure><details class="allocation-captures"><summary>재무제표·계정 검색·PDF 상세 화면 보기 · 7장</summary><div><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163228-hd.png" data-caption="재무상태표 상세" aria-label="재무상태표 상세 확대"><img src="assets/abap-financial-20260930163228-hd.png" alt="재무상태표 상세" width="1721" height="1019" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>재무상태표 상세</h4><p>자산과 부채·자본을 계정 분류별로 펼쳐 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163446-hd.png" data-caption="계정별 검색" aria-label="계정별 검색 확대"><img src="assets/abap-financial-20260930163446-hd.png" alt="계정별 검색" width="1727" height="1056" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>계정별 검색</h4><p>계정 코드와 명칭으로 원하는 재무제표 항목을 찾습니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163529-hd.png" data-caption="손익계산서" aria-label="손익계산서 확대"><img src="assets/abap-financial-20260930163529-hd.png" alt="손익계산서" width="1737" height="1052" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>손익계산서</h4><p>수익·비용과 당기순이익, 수익 대비 비용률과 순이익률을 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163324-hd.png" data-caption="재무상태표 PDF 미리보기" aria-label="재무상태표 PDF 미리보기 확대"><img src="assets/abap-financial-20260930163324-hd.png" alt="재무상태표 PDF 미리보기" width="1090" height="1030" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>재무상태표 PDF 미리보기</h4><p>조회한 재무상태표를 출력용 문서로 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163349-hd.png" data-caption="재무상태표 PDF 저장" aria-label="재무상태표 PDF 저장 확대"><img src="assets/abap-financial-20260930163349-hd.png" alt="재무상태표 PDF 저장" width="1883" height="1012" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>재무상태표 PDF 저장</h4><p>인쇄 화면에서 PDF 저장으로 이어집니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163701-hd.png" data-caption="손익계산서 PDF 미리보기" aria-label="손익계산서 PDF 미리보기 확대"><img src="assets/abap-financial-20260930163701-hd.png" alt="손익계산서 PDF 미리보기" width="1551" height="956" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>손익계산서 PDF 미리보기</h4><p>수익과 비용 항목을 출력용 손익계산서로 확인합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" href="assets/abap-financial-20260930163715-hd.png" data-caption="손익계산서 PDF 저장" aria-label="손익계산서 PDF 저장 확대"><img src="assets/abap-financial-20260930163715-hd.png" alt="손익계산서 PDF 저장" width="1831" height="905" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>손익계산서 PDF 저장</h4><p>손익계산서를 인쇄하거나 PDF로 저장합니다.</p></div></figcaption></figure></div></details></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A15"><summary>잔액과 G/L 계정 분류 연결<span>코드 보기</span></summary><div class="abap-code-meta">ZCDS_E2_FI_0011 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="잔액과 G/L 계정 분류 연결 코드"><code>@Metadata.ignorePropagatedAnnotations: true
 @OData.entitySet.name: &#x27;SheetSet&#x27;
 @OData.publish: true
 define view ZCDS_E2_FI_0011
@@ -768,7 +1254,38 @@ GLMaster.xbilk as IsBalanceSheetAccount,
 @EndUserText.label: &#x27;대분류&#x27;
 GLMaster.cate_l as CategoryLarge,
 @UI.lineItem: [{ position: 20 }]
-@EndUserText.label: &#x27;중분류&#x27;</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">03</span><div><h4>공통 결산 상태로 업무 연결</h4><p>여러 프로그램에서 같은 결산 통제 클래스를 호출하고, 대시보드에서 기간·모듈별 상태를 확인합니다. 다른 모듈은 팀 프로그램과의 연계 대상입니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-closing.png" data-caption="결산 통제 대시보드" aria-label="결산 통제 대시보드 확대"><img src="assets/abap-closing.png" alt="결산 통제 대시보드" width="749" height="271" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>결산 통제 대시보드</h4><p>모듈별 열림·잠김 상태를 확인합니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A16"><summary>결산 기간 상태 확인<span>코드 보기</span></summary><div class="abap-code-meta">ZCL_E2_CO_CLOSE · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="결산 기간 상태 확인 코드"><code>METHOD period_check.
+@EndUserText.label: &#x27;중분류&#x27;</code></pre></details><details class="feature-code abap-code" id="A31"><summary>회계기간별 차변·대변 잔액 구성<span>코드 보기</span></summary><div class="abap-code-meta">ZCDS_E2_FI_0014(재무제표 Unpivot) · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="회계기간별 차변·대변 잔액 구성 코드"><code>define view ZCDS_E2_FI_0014
+as select from zte2fi0004
+{
+key bukrs,
+key gjahr,
+key saknr,
+&#x27;00&#x27; as FiscalPeriod,
+waers,
+tslvt as BalanceCarriedForward,
+( tslvt - tslvt ) as PeriodDebitAmount,
+( tslvt - tslvt ) as PeriodCreditAmount,
+( tslvt - tslvt ) as PeriodNetChange,
+tslvt as EndingBalance
+}
+union all select from zte2fi0004
+{
+key bukrs,
+key gjahr,
+key saknr,
+&#x27;01&#x27; as FiscalPeriod,
+waers,
+( tslvt - tslvt ) as BalanceCarriedForward,
+hsl01_s as PeriodDebitAmount,
+hsl01_h as PeriodCreditAmount,
+(hsl01_s - hsl01_h) as PeriodNetChange,
+(hsl01_s - hsl01_h) as EndingBalance
+}
+union all select from zte2fi0004
+{
+key bukrs,
+key gjahr,
+key saknr,</code></pre></details></div></div></section><section class="feature-pair"><div class="feature-heading"><span class="feature-order">03</span><div><h4>공통 결산 상태로 업무 연결</h4><p>여러 프로그램에서 같은 결산 통제 클래스를 호출하고, 대시보드에서 기간·모듈별 상태를 확인합니다. 다른 모듈은 팀 프로그램과의 연계 대상입니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-closing.png" data-caption="결산 통제 대시보드" aria-label="결산 통제 대시보드 확대"><img src="assets/abap-closing.png" alt="결산 통제 대시보드" width="749" height="271" loading="lazy"><span>화면 확대 ↗</span></a><figcaption><div><h4>결산 통제 대시보드</h4><p>모듈별 열림·잠김 상태를 확인합니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" open id="A16"><summary>결산 기간 상태 확인<span>코드 보기</span></summary><div class="abap-code-meta">ZCL_E2_CO_CLOSE · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="결산 기간 상태 확인 코드"><code>METHOD period_check.
   DATA: lv_status TYPE zte2co0009-co_status.
   CLEAR rv_check.
   SELECT SINGLE co_status
