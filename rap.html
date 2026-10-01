@@ -378,6 +378,19 @@ body[data-page="rap"] .site-header .wrap,
 .project-panel-content .business-flow{grid-template-columns:repeat(3,minmax(0,1fr));margin:24px 0}
 .project-panel-content .business-flow li{min-width:0;font-size:12px;padding:15px 13px}
 .project-panel-content .allocation-design{margin:26px 0 38px;padding:24px}
+.project-panel-content .allocation-design.design-disclosure{padding:0}
+.design-summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 24px;cursor:pointer;list-style:none;border-radius:8px}
+.design-summary::-webkit-details-marker{display:none}
+.design-summary h4{font-size:22px;line-height:1.5;margin:8px 0 0}
+.design-summary .eyebrow{font-size:10px}
+.design-summary:hover{background:var(--surface-soft,#edf2fc)}
+.design-summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.design-toggle{flex-shrink:0;color:var(--blue);font-size:13px;font-weight:600}
+.design-disclosure>.design-summary .when-open{display:none}
+.design-disclosure[open]>.design-summary .when-open{display:inline}
+.design-disclosure[open]>.design-summary .when-closed{display:none}
+.design-content{padding:24px;border-top:1px solid var(--line)}
+.design-intro{margin:0 0 24px;font-size:14px}
 .project-panel-content .allocation-design-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
 .project-panel-content .allocation-design-gallery .capture-link{height:230px}
 .project-panel-content .allocation-design-gallery img{height:100%;max-height:100%}
@@ -477,6 +490,10 @@ body[data-page="rap"] .site-header .wrap,
  .project-panel-content .business-flow{grid-template-columns:minmax(0,1fr)}
  .project-panel-content .business-flow li{padding:12px 16px}
  .project-panel-content .allocation-design{padding:18px}
+ .design-summary{padding:18px;gap:14px}
+ .design-summary h4{font-size:20px}
+ .design-content{padding:18px}
+ .design-toggle{font-size:12px}
  .project-panel-content .allocation-design-gallery,.project-panel-content .ar-design-gallery{grid-template-columns:minmax(0,1fr)}
  .project-panel-content .allocation-design-gallery .capture-link{height:auto}
  .project-panel-content .allocation-design-gallery img{height:auto;max-height:360px}
@@ -1834,7 +1851,7 @@ const panels = Array.from(document.querySelectorAll('[data-project-panel][id]'))
 const panelLinks = Array.from(document.querySelectorAll('a[data-panel-link][data-panel]'));
 const projectSelect = document.getElementById('project-select');
 const defaultPanel = document.body.dataset.defaultPanel || panels[0]?.id;
-const stateKey = '__portfolioNavigationV4';
+const stateKey = '__portfolioNavigationV5';
 const details = Array.from(document.querySelectorAll('details'));
 let activePanel = null;
 let restoring = false;
