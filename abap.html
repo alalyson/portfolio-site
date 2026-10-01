@@ -503,6 +503,94 @@ body[data-page="rap"] .site-header .wrap,
  .project-panel-content .capture-card{break-inside:avoid}
  .project-flow{break-inside:avoid}
 }
+
+/* Warm paper surfaces shared by the home, project pages and image viewer.
+   Original screenshots and certificates retain their source colors. */
+@media screen {
+  :root {
+    color-scheme: light;
+    --paper: #f1ede5;
+    --surface: #f8f5ee;
+    --surface-soft: #e9e2d7;
+    --surface-media: #dedbd4;
+    --ink: #29333d;
+    --muted: #65635e;
+    --line: #d7cfc2;
+    --blue: #3c5c99;
+    --navy: #29333e;
+    --accent-soft: #e4e8ed;
+    --accent-line: #b6c1d1;
+    --code-bg: #282d32;
+  }
+
+  .site-header { background: rgba(241, 237, 229, .97); }
+
+  .skip, .feature-code, .domain, .architecture, .evidence,
+  .more-evidence, .skill-table, .badge-card, .language-card,
+  .screen-index a, .capture-card, .image-viewer, .copy-certificate,
+  .program-select, .abap-project-card, .data-thread,
+  .allocation-captures, .allocation-design, .rap-captures,
+  .project-end button, .ar-flow-stages li, .ar-flow-outcomes>div,
+  .project-pick, .additional-programs a, .posting-document,
+  .project-panel-head, .project-flow li a, .project-mobile-picker select {
+    background-color: var(--surface);
+    border-color: var(--line);
+  }
+
+  .filter-band, .evidence-head, .engineering-principle,
+  .skill-table th, .review-note, .business-flow li, .design-note,
+  .viewer-close, .program-disclosure>summary, .posting-entry,
+  .posting-data-model, .project-flow, .project-page-link,
+  .project-toggle, .rap-focus, .ar-design-flow {
+    background-color: var(--surface-soft);
+    border-color: var(--line);
+  }
+
+  .story-meta span, .case-badge, .panel-badge {
+    background-color: var(--accent-soft);
+    border-color: var(--accent-line);
+  }
+  .domain:hover, .screen-index a:hover, .abap-project-card:hover,
+  .copy-certificate:hover, .project-end button:hover,
+  .project-page-link:hover, .project-nav [data-panel-link]:hover {
+    background-color: var(--surface-soft);
+    border-color: var(--accent-line);
+  }
+  .project-nav [data-panel-link][aria-current="page"] {
+    background-color: var(--accent-soft);
+    border-color: var(--accent-line);
+  }
+  .project-nav [aria-current="page"] small { color: var(--blue); }
+  .project-panel-head { border-top-color: var(--blue); }
+  .posting-entry { border-left-color: var(--blue); }
+  .project-sidebar { scrollbar-color: #b9b1a4 transparent; }
+
+  .capture-card .capture-link, .project-pick-image,
+  .hero-evidence img, .viewer-stage, .viewer-canvas {
+    background-color: var(--surface-media);
+  }
+  .allocation-design-gallery .capture-link { background-color: #202221; }
+  .viewer-caption { background-color: var(--paper); }
+  .viewer-arrow { background-color: rgba(248, 245, 238, .96); border-color: var(--line); }
+  .viewer-arrow:hover:not(:disabled) { background-color: var(--accent-soft); }
+  .viewer-thumbnails button { background-color: var(--surface-soft); border-color: var(--line); }
+  .viewer-thumbnails button[aria-current="true"] { background-color: var(--accent-soft); border-color: var(--blue); }
+  .image-viewer::backdrop { background-color: rgba(31, 34, 37, .82); }
+
+  .implementation-code, .abap-code pre {
+    background-color: var(--code-bg);
+    color: #e6e1d8;
+    scrollbar-color: #747775 var(--code-bg);
+  }
+  .evidence-head { color: var(--muted); }
+  .hero-panel, .hero-evidence { box-shadow: 12px 14px 0 #e2dbcf; }
+  .rap-decisions, .credential-link { border-color: var(--line); }
+
+  @media (max-width: 700px) {
+    .skill-table tr { background-color: var(--surface); }
+    .hero-panel, .hero-evidence { box-shadow: 6px 8px 0 #e2dbcf; }
+  }
+}
 </style></head><body data-page="abap" data-default-panel="abap"><a class="skip" href="#main">본문으로 바로가기</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html">이상현<span>SAP ABAP · RAP DEVELOPER</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="nav">메뉴</button><nav class="nav" id="nav" aria-label="주요 메뉴"><a href="index.html">홈</a><a href="abap.html" aria-current="page">ABAP 프로젝트</a><a href="rap.html">RAP 프로젝트</a><a href="index.html#skills">기술 역량</a><a href="index.html#certifications">자격증</a></nav></div></header><main id="main"><div class="wrap project-page"><header class="project-page-head"><a class="project-breadcrumb" href="index.html#abap">← 포트폴리오로 돌아가기</a><span class="eyebrow">PROJECT DETAIL / ABAP</span><h1>ABAP 프로젝트</h1><p>CODE 1기 · 식자재 ERP 모의 구축</p><dl class="project-context"><div><dt>프로젝트</dt><dd>CODE 1기 · 식자재 ERP 모의 구축</dd></div><div><dt>담당 역할</dt><dd>FCM PL · FI·CO 설계 및 프로그램 개발</dd></div><div><dt>업무 연계</dt><dd>MM·SD·PP 담당자와 회계전표·원가 흐름 조율</dd></div><div><dt>주요 기술</dt><dd>ABAP · ALV · 글로벌 클래스 · CDS · UI5</dd></div></dl></header><div class="project-workspace"><aside class="project-sidebar"><div class="project-mobile-picker"><label for="project-select">프로그램 바로가기</label><select id="project-select"><optgroup label="프로젝트"><option value="#abap">프로젝트 개요</option></optgroup><optgroup label="01 / 채권 관리"><option value="#abap-deposits">입금 내역 업로드</option><option value="#abap-receivables">매출채권 반제</option><option value="#abap-documents">전표 조회·역분개</option></optgroup><optgroup label="02 / 자산·비용 처리"><option value="#abap-assets">감가상각</option><option value="#abap-asset-inquiry">고정자산 조회</option><option value="#abap-payroll">인건비 배치</option></optgroup><optgroup label="03 / 배부·결산"><option value="#abap-skf">통계주요지표(SKF)</option><option value="#abap-allocation">배부 사이클</option></optgroup><optgroup label="04 / 분석·보고"><option value="#abap-reporting">수익성 분석</option><option value="#abap-financial">재무제표</option></optgroup><optgroup label="공통 설계"><option value="#posting-design">다중 전표 생성</option><option value="#abap-closing">결산 통제</option></optgroup></select></div><nav class="project-nav" aria-label="ABAP 프로그램 목록"><div class="project-nav-group"><h2>프로젝트</h2><a href="#abap" data-panel-link data-panel="abap"><span class="panel-label">프로젝트 개요</span><small>CODE 1기 · FI / CO</small></a></div><div class="project-nav-group"><h2>01 / 채권 관리</h2><a href="#abap-deposits" data-panel-link data-panel="abap-deposits"><span class="panel-label">입금 내역 업로드</span><small>ZRE2FI0003</small></a><a href="#abap-receivables" data-panel-link data-panel="abap-receivables"><span class="panel-label">매출채권 반제<em class="panel-badge">대표</em></span><small>ZRE2FI0005</small></a><a href="#abap-documents" data-panel-link data-panel="abap-documents"><span class="panel-label">전표 조회·역분개</span><small>ZRE2FI0001</small></a></div><div class="project-nav-group"><h2>02 / 자산·비용 처리</h2><a href="#abap-assets" data-panel-link data-panel="abap-assets"><span class="panel-label">감가상각</span><small>ZRE2FI0008</small></a><a href="#abap-asset-inquiry" data-panel-link data-panel="abap-asset-inquiry"><span class="panel-label">고정자산 조회</span><small>ZRE2FI0009</small></a><a href="#abap-payroll" data-panel-link data-panel="abap-payroll"><span class="panel-label">인건비 배치</span><small>ZRE2HR0001</small></a></div><div class="project-nav-group"><h2>03 / 배부·결산</h2><a href="#abap-skf" data-panel-link data-panel="abap-skf"><span class="panel-label">통계주요지표(SKF)</span><small>SAPMZE2CO0003</small></a><a href="#abap-allocation" data-panel-link data-panel="abap-allocation"><span class="panel-label">배부 사이클<em class="panel-badge">대표</em></span><small>ZRE2CO0005</small></a></div><div class="project-nav-group"><h2>04 / 분석·보고</h2><a href="#abap-reporting" data-panel-link data-panel="abap-reporting"><span class="panel-label">수익성 분석</span><small>RFC · CDS · UI5</small></a><a href="#abap-financial" data-panel-link data-panel="abap-financial"><span class="panel-label">재무제표</span><small>CDS · OData · UI5</small></a></div><div class="project-nav-group"><h2>공통 설계</h2><a href="#posting-design" data-panel-link data-panel="posting-design"><span class="panel-label">다중 전표 생성</span><small>Deep Table · 공통 메서드</small></a><a href="#abap-closing" data-panel-link data-panel="abap-closing"><span class="panel-label">결산 통제</span><small>ZCL_E2_CO_CLOSE</small></a></div></nav></aside><div class="project-panels"><section id="abap" class="project-panel" data-project-panel><div class="section-head"><div><span class="eyebrow">PROJECT 01 / ABAP</span><h2>프로젝트 개요</h2></div><p>입금과 비용 처리부터 배부·결산, 분석까지.<br>팀 프로젝트에서 직접 설계하고 개발한 업무를 소개합니다.</p></div><div class="project-flow"><h3>업무 흐름</h3><ol aria-label="업무 흐름"><li><a href="#abap-receivables">채권 관리</a></li><li><a href="#abap-assets">자산·비용 처리</a></li><li><a href="#abap-allocation">배부·결산</a></li><li><a href="#abap-reporting">분석·보고</a></li></ol></div><div class="project-picks"><a class="project-pick" href="#abap-receivables"><div class="project-pick-image"><img src="assets/abap-ar-confirm-17h19m41s927-hd.png" alt="일괄 반제 확정 결과" loading="lazy" decoding="async"></div><div class="project-pick-copy"><span class="eyebrow">FI / 대표 프로그램</span><h3>채권 관리</h3><p>부분 입금과 선수금을 구분하고, 검토·확정 흐름과 딥 테이블 기반 다중 전표 생성 메서드를 구현했습니다.</p><div class="tags"><span>부분 반제</span><span>선수금 상계</span><span>딥 테이블 · 전표 생성</span></div><span class="case-enter">설계와 구현 보기 ↗</span></div></a><a class="project-pick" href="#abap-allocation"><div class="project-pick-image"><img src="assets/abap-allocation-it-hd.png" alt="전산팀 비용의 배부 기준과 예상 금액 미리보기" loading="lazy" decoding="async"></div><div class="project-pick-copy"><span class="eyebrow">CO / 대표 프로그램</span><h3>배부·결산</h3><p>단계별 배부 기준을 미리 확인하고, 전체 사이클을 한 번에 시뮬레이션한 뒤 결과를 검토·확정합니다.</p><div class="tags"><span>SKF</span><span>단계별 미리보기</span><span>단수 차이 처리</span></div><span class="case-enter">설계와 구현 보기 ↗</span></div></a></div><a class="posting-entry" href="#posting-design"><span><b>공통 전표 생성 메서드</b><small>딥 테이블 설계 · 전표별 채번 · 일괄 저장 · 결과 반환</small></span><span aria-hidden="true">↗</span></a><div class="additional-programs"><span>추가 구현</span><a href="#abap-assets">자산·비용 처리 <small>감가상각 · 자산 이력 · 인건비 배치</small><b aria-hidden="true">↗</b></a><a href="#abap-reporting">분석·보고 <small>재무제표 · 수익성 분석 · 결산 상태</small><b aria-hidden="true">↗</b></a></div></section><section class="project-panel" id="abap-deposits" data-project-panel aria-labelledby="panel-title-abap-deposits"><header class="project-panel-head"><span class="eyebrow">ZRE2FI0003</span><h2 id="panel-title-abap-deposits">입금 내역 업로드</h2><p>입금 내역을 저장하고 FI 전표와 연결해 채권 반제의 출발점을 구성했습니다.</p></header><div class="project-panel-content"><section class="feature-pair"><div class="feature-heading"><span class="feature-order">01</span><div><h4>입금 데이터를 반제의 출발점으로</h4><p>업로드한 입금 내역을 조회하고 저장합니다. 입금과 가수금 전표를 연결해 이후 채권 반제에서 대조할 수 있게 구성했습니다.</p></div></div><div class="feature-columns"><div class="feature-screens"><figure class="capture-card"><a class="capture-link" href="assets/abap-deposit.png" data-caption="입금 내역 업로드 결과" aria-label="입금 내역 업로드 결과 확대"><img src="assets/abap-deposit.png" alt="입금 내역 업로드 결과" width="375" height="327" loading="lazy"></a><figcaption><div><h4>입금 내역 업로드 결과</h4><p>입금일자·가상계좌·금액·거래처를 확인하고 저장합니다.</p></div></figcaption></figure></div><div class="feature-implementation"><p class="feature-code-label">관련 구현</p><details class="feature-code abap-code" id="A06"><summary>입금 내역과 FI 전표 데이터 구성<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0003 · 구현 루틴</div><pre class="implementation-code" tabindex="0" aria-label="입금 내역과 FI 전표 데이터 구성 코드"><code><span class="syntax-keyword">FORM</span> save_deposit .
   <span class="syntax-keyword">DATA</span> : ls_save  <span class="syntax-keyword">TYPE</span> zte2fi0012,
          lt_save  <span class="syntax-keyword">LIKE</span> <span class="syntax-keyword">TABLE</span> <span class="syntax-keyword">OF</span> ls_save,
