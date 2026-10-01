@@ -154,6 +154,20 @@ button.contact-link{width:100%;text-align:left;font:inherit;color:inherit;backgr
 .opic-details dd{margin:3px 0 0;overflow-wrap:anywhere;color:var(--ink);font-weight:600}
 
 /* Receivables: process overview, design decisions and original development records. */
+.ar-mermaid{margin:28px 0 36px;scroll-margin-top:150px}
+.ar-mermaid>h5{font-size:21px;margin:0 0 10px}
+.ar-mermaid>p{font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:20px}
+.ar-mermaid-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ar-mermaid-gallery .capture-link{height:230px;aspect-ratio:auto;background:#fff;padding:14px}
+.ar-mermaid-gallery figcaption{border-top:2px solid var(--blue);padding:16px;gap:10px}
+.ar-mermaid-gallery h5{font-size:14px;line-height:1.6;margin:0 0 8px}
+.ar-mermaid-gallery p{font-size:12px;line-height:1.7}
+.viewer-zoom{background:#eef3ff;color:var(--blue);border:1px solid var(--line);border-radius:4px;padding:10px 12px;cursor:pointer;white-space:nowrap;margin-left:auto}
+.viewer-zoom[hidden]{display:none}
+.diagram-readable .viewer-canvas{height:calc(94dvh - 260px);overflow:auto;margin:0 54px;padding:16px;background:#fff}
+.diagram-readable .viewer-canvas img{max-width:none;max-height:none;width:auto;height:auto;margin:0 auto}
+@media(max-width:900px){.ar-mermaid-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ar-mermaid-gallery{grid-template-columns:1fr}.viewer-zoom{font-size:11px;padding:8px}.viewer-bar{flex-wrap:wrap;gap:8px}.viewer-bar h2{flex:1 1 60%}.diagram-readable .viewer-canvas{margin:0 34px;height:calc(92dvh - 290px)}}
 .ar-design-flow{margin:24px 0 30px;padding:24px;background:#f5f8ff;border:1px solid var(--line);border-radius:7px}
 .ar-design-flow>figcaption{font-size:17px;font-weight:700;margin-bottom:22px}
 .ar-flow-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;list-style:none;padding:0;margin:0}
@@ -204,7 +218,7 @@ button.contact-link{width:100%;text-align:left;font:inherit;color:inherit;backgr
         <div><span>확정 / 실제 반영</span><strong>다중 전표 생성 → 채번 결과 연결</strong><p>새 전표번호를 연결한 뒤 반제 내역과 입금 상태를 반영합니다.</p></div>
       </div>
       <p class="ar-flow-note">개발 당시의 ‘반제 순서도’를 현재 소스의 호출 구조에 맞춰 요약했습니다.</p>
-    </figure><div class="ar-design-decisions"><article class="ar-design-decision"><span class="eyebrow">01 / 설계 판단</span><h5>일괄 처리는 검토한 뒤 확정하도록</h5><p class="ar-design-question">대량의 채권을 한 번에 반제하므로, 실수로 확정하기 전에 결과를 살펴볼 단계가 필요했습니다.</p><p>미리보기와 확정을 분리하고, 미리보기 전에는 확정 버튼을 숨겼습니다. 검토 시에는 임시 전표번호를 사용하고 확정할 때 실제 전표 생성 메서드를 호출합니다.</p><details class="feature-code abap-code" id="A34"><summary>미리보기 여부에 따른 확정 버튼 제어<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="미리보기 여부에 따른 확정 버튼 제어 코드"><code>MODULE status_0100 OUTPUT.
+    </figure><section class="ar-mermaid" id="receivables-mermaid" aria-labelledby="ar-mermaid-title"><h5 id="ar-mermaid-title">최종 순서도</h5><p>전체 흐름에서 세부 로직까지, 다섯 도식으로 연결했습니다. 도식을 선택하면 확대하거나 글자 크기로 볼 수 있습니다.</p><div class="capture-grid ar-mermaid-gallery"><figure class="capture-card"><a class="capture-link" data-diagram="true" data-caption="전체 실행과 시뮬레이션·확정 분리" href="assets/ar-final-flow-1.svg" aria-label="전체 실행과 시뮬레이션·확정 분리 순서도 확대"><img src="assets/ar-final-flow-1.svg" alt="전체 실행과 시뮬레이션·확정 분리 순서도" loading="lazy"></a><figcaption><span class="capture-number">01</span><div><h5>전체 실행과 시뮬레이션·확정 분리</h5><p>미리보기와 확정의 분기부터 DB 반영까지 전체 호출 흐름입니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" data-diagram="true" data-caption="기존 선수금 상계 — netting_ar" href="assets/ar-final-flow-2.svg" aria-label="기존 선수금 상계 — netting_ar 순서도 확대"><img src="assets/ar-final-flow-2.svg" alt="기존 선수금 상계 — netting_ar 순서도" loading="lazy"></a><figcaption><span class="capture-number">02</span><div><h5>기존 선수금 상계 — netting_ar</h5><p>일반 입금 처리 전에 기존 선수금과 채권을 상계하는 흐름입니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" data-diagram="true" data-caption="일반 입금의 전액·부분 반제와 선수금 발생 — close_ar" href="assets/ar-final-flow-3.svg" aria-label="일반 입금의 전액·부분 반제와 선수금 발생 — close_ar 순서도 확대"><img src="assets/ar-final-flow-3.svg" alt="일반 입금의 전액·부분 반제와 선수금 발생 — close_ar 순서도" loading="lazy"></a><figcaption><span class="capture-number">03</span><div><h5>일반 입금의 전액·부분 반제와 선수금 발생 — close_ar</h5><p>입금액과 채권 잔액에 따라 전액·부분 반제와 선수금을 구분합니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" data-diagram="true" data-caption="공통 다중 전표 생성 클래스와 후속 RFC" href="assets/ar-final-flow-4.svg" aria-label="공통 다중 전표 생성 클래스와 후속 RFC 순서도 확대"><img src="assets/ar-final-flow-4.svg" alt="공통 다중 전표 생성 클래스와 후속 RFC 순서도" loading="lazy"></a><figcaption><span class="capture-number">04</span><div><h5>공통 다중 전표 생성 클래스와 후속 RFC</h5><p>공통 클래스의 전표 생성과 커밋 이후 RFC 처리 조건을 보여줍니다.</p></div></figcaption></figure><figure class="capture-card"><a class="capture-link" data-diagram="true" data-caption="채번 결과 연결과 미결·반제 이관" href="assets/ar-final-flow-5.svg" aria-label="채번 결과 연결과 미결·반제 이관 순서도 확대"><img src="assets/ar-final-flow-5.svg" alt="채번 결과 연결과 미결·반제 이관 순서도" loading="lazy"></a><figcaption><span class="capture-number">05</span><div><h5>채번 결과 연결과 미결·반제 이관</h5><p>채번된 아이템을 연결하고 미결·반제 내역과 입금 상태를 반영합니다.</p></div></figcaption></figure></div></section><div class="ar-design-decisions"><article class="ar-design-decision"><span class="eyebrow">01 / 설계 판단</span><h5>일괄 처리는 검토한 뒤 확정하도록</h5><p class="ar-design-question">대량의 채권을 한 번에 반제하므로, 실수로 확정하기 전에 결과를 살펴볼 단계가 필요했습니다.</p><p>미리보기와 확정을 분리하고, 미리보기 전에는 확정 버튼을 숨겼습니다. 검토 시에는 임시 전표번호를 사용하고 확정할 때 실제 전표 생성 메서드를 호출합니다.</p><details class="feature-code abap-code" id="A34"><summary>미리보기 여부에 따른 확정 버튼 제어<span>코드 보기</span></summary><div class="abap-code-meta">ZRE2FI0005 · 핵심 구간 발췌</div><pre class="implementation-code" tabindex="0" aria-label="미리보기 여부에 따른 확정 버튼 제어 코드"><code>MODULE status_0100 OUTPUT.
   <span class="syntax-keyword">DATA</span>    : lt_extab <span class="syntax-keyword">TYPE</span> <span class="syntax-keyword">TABLE</span> <span class="syntax-keyword">OF</span> sy-ucomm.
   <span class="syntax-keyword">REFRESH</span> : lt_extab.
   <span class="syntax-keyword">IF</span> gv_simul_done <span class="syntax-keyword">IS</span> <span class="syntax-keyword">INITIAL</span>.
@@ -2998,6 +3012,24 @@ if (viewer) {
   const viewerPosition = document.getElementById('viewer-position');
   const viewerDescription = document.getElementById('viewer-description');
   const viewerThumbnails = document.getElementById('viewer-thumbnails');
+  const viewerCanvas = viewer.querySelector('.viewer-canvas');
+  const viewerZoom = document.createElement('button');
+  viewerZoom.type = 'button';
+  viewerZoom.className = 'viewer-zoom';
+  viewerZoom.hidden = true;
+  viewer.querySelector('.viewer-bar form').before(viewerZoom);
+  function resetDiagramZoom() {
+    viewer.classList.remove('diagram-readable');
+    viewerZoom.textContent = '글자 크기로 보기';
+    viewerZoom.setAttribute('aria-pressed', 'false');
+    viewerCanvas.scrollTo(0, 0);
+  }
+  viewerZoom.addEventListener('click', () => {
+    const readable = viewer.classList.toggle('diagram-readable');
+    viewerZoom.textContent = readable ? '전체 도식 보기' : '글자 크기로 보기';
+    viewerZoom.setAttribute('aria-pressed', String(readable));
+    viewerCanvas.scrollTo(0, 0);
+  });
   let thumbnailKey = '';
   function centerThumbnail() {
     const selected = viewerThumbnails.querySelector('[aria-current="true"]');
@@ -3019,6 +3051,7 @@ if (viewer) {
     return {
       items: links.map(item => ({
         src: item.href,
+        diagram: item.dataset.diagram === 'true',
         caption: item.dataset.caption || item.querySelector('img')?.alt || '실행 화면',
         description: item.closest('figure')?.querySelector('figcaption p')?.textContent.trim() || ''
       })),
@@ -3028,6 +3061,8 @@ if (viewer) {
   function syncViewer() {
     const image = history.state?.__portfolioViewer;
     if (image) {
+      resetDiagramZoom();
+      viewerZoom.hidden = !image.diagram;
       viewerImage.src = image.src;
       viewerImage.alt = image.caption;
       viewerTitle.textContent = image.caption;
@@ -3119,6 +3154,7 @@ if (viewer) {
   }
   viewer.querySelector('.viewer-close').addEventListener('click', closePreview);
   viewer.addEventListener('click', event => {
+    if (viewer.classList.contains('diagram-readable') && event.target.closest('.viewer-canvas')) return;
     if (event.target.closest('img, a, button, form, .viewer-caption, .viewer-thumbnails, .viewer-bar')) return;
     closePreview(event);
   });
