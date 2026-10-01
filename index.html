@@ -334,6 +334,7 @@ body[data-page="rap"] .site-header .wrap,
 .project-page-head .project-context dd{font-size:13px}
 .project-workspace{display:grid;grid-template-columns:220px minmax(0,1fr);gap:36px;align-items:start}
 .project-sidebar{position:sticky;top:calc(var(--project-header-height) + 22px);min-width:0;max-height:none;overflow:visible;padding:2px 2px 12px}
+.project-sidebar.is-tall{position:static}
 .project-mobile-picker{display:none}
 .project-nav-group{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
 .project-nav-group h2{margin:0;padding:0;font-size:12px;font-weight:700;letter-spacing:0;line-height:1.5;color:var(--muted)}
@@ -654,9 +655,10 @@ const page = document.body.dataset.page || 'home';
 const panels = Array.from(document.querySelectorAll('[data-project-panel][id]'));
 const panelLinks = Array.from(document.querySelectorAll('a[data-panel-link][data-panel]'));
 const navGroups = Array.from(document.querySelectorAll('[data-nav-group]'));
+const projectSidebar = document.querySelector('.project-sidebar');
 const projectSelect = document.getElementById('project-select');
 const defaultPanel = document.body.dataset.defaultPanel || panels[0]?.id;
-const stateKey = '__portfolioNavigationV6';
+const stateKey = '__portfolioNavigationV7';
 const details = Array.from(document.querySelectorAll('details'));
 let activePanel = null;
 let restoring = false;
@@ -671,17 +673,28 @@ function hashTarget(hash) {
   try { return document.getElementById(decodeURIComponent(hash.slice(1))); }
   catch { return null; }
 }
-function expandNavigationGroup(id) {
-  navGroups.forEach(group => {
-    const open = group.id === id;
-    group.querySelector('[data-nav-toggle]').setAttribute('aria-expanded', String(open));
-    group.querySelector('[data-nav-items]').hidden = !open;
-  });
+function updateSidebarLayout() {
+  if (!projectSidebar) return;
+  const picker = projectSidebar.querySelector('.project-mobile-picker');
+  const compact = picker && getComputedStyle(picker).display !== 'none';
+  const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 0;
+  // Long lists follow the page so every group remains reachable without an inner scrollbar.
+  projectSidebar.classList.toggle('is-tall', !compact && projectSidebar.offsetHeight > innerHeight - headerHeight - 42);
+}
+if (projectSidebar) {
+  new ResizeObserver(updateSidebarLayout).observe(projectSidebar);
+  window.addEventListener('resize', updateSidebarLayout);
+}
+function setNavigationGroup(group, open) {
+  if (!group) return;
+  group.querySelector('[data-nav-toggle]').setAttribute('aria-expanded', String(open));
+  group.querySelector('[data-nav-items]').hidden = !open;
+  updateSidebarLayout();
 }
 navGroups.forEach(group => {
   group.querySelector('[data-nav-toggle]').addEventListener('click', () => {
     const wasOpen = group.querySelector('[data-nav-toggle]').getAttribute('aria-expanded') === 'true';
-    expandNavigationGroup(wasOpen ? null : group.id);
+    setNavigationGroup(group, !wasOpen);
     queueRemember();
   });
 });
@@ -698,7 +711,7 @@ function activatePanel(id) {
   if (projectSelect) projectSelect.value = `#${activePanel}`;
   const selectedGroup = panelLinks.find(link => link.dataset.panel === activePanel)?.closest('[data-nav-group]');
   navGroups.forEach(group => group.classList.toggle('has-current', group === selectedGroup));
-  expandNavigationGroup(selectedGroup?.id);
+  setNavigationGroup(selectedGroup, true);
 }
 function reveal(hash) {
   const target = hashTarget(hash);
@@ -730,6 +743,7 @@ function snapshot() {
   return {
     page,
     activePanel,
+    openNavGroups: navGroups.filter(group => group.querySelector('[data-nav-toggle]').getAttribute('aria-expanded') === 'true').map(group => group.id),
     x: scrollX,
     y: scrollY,
     openDetails: details.flatMap((detail, index) => detail.open ? [{ id: detail.id || null, index }] : [])
@@ -766,6 +780,9 @@ function finishRestore(position) {
 function restore(saved) {
   beginRestore();
   activatePanel(saved.activePanel);
+  if (Array.isArray(saved.openNavGroups)) {
+    navGroups.forEach(group => setNavigationGroup(group, saved.openNavGroups.includes(group.id)));
+  }
   const openDetails = new Set(saved.openDetails.map(item =>
     (item.id ? document.getElementById(item.id) : null) || details[item.index]
   ));
