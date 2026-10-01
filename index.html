@@ -420,8 +420,8 @@ ENDMODULE.</code></pre></details><a class="text-link" href="#A07">시뮬레이�
     <span class="syntax-keyword">CLEAR</span> ls_deposit_upd.
     &lt;fs_upd&gt;-status = <span class="syntax-string">&#x27;S&#x27;</span>.
     &lt;fs_upd&gt;-message = TEXT-m01.      <span class="syntax-comment">&quot; 성공 메시지</span>
-    <span class="syntax-keyword">READ</span> <span class="syntax-keyword">TABLE</span> lt_fi_head <span class="syntax-keyword">INTO</span> <span class="syntax-keyword">DATA</span>(ls_head_map) <span class="syntax-keyword">WITH</span> <span class="syntax-keyword">KEY</span> = &lt;fs_upd&gt;-seq_no.
-    <span class="syntax-keyword">IF</span> sy-subrc <span class="syntax-keyword">NE</span> <span class="syntax-number">0</span>.
+    <span class="syntax-keyword">READ</span> <span class="syntax-keyword">TABLE</span> lt_fi_head <span class="syntax-keyword">INTO</span> <span class="syntax-keyword">DATA</span>(ls_head_map) <span class="syntax-keyword">WITH</span> <span class="syntax-keyword">KEY</span> xblnr = &lt;fs_upd&gt;-seq_no.
+    <span class="syntax-keyword">IF</span> sy-subrc = <span class="syntax-number">0</span>.
       &lt;fs_upd&gt;-belnr = ls_head_map-belnr.
     <span class="syntax-keyword">ENDIF</span>.
     <span class="syntax-keyword">MOVE-CORRESPONDING</span> &lt;fs_upd&gt; <span class="syntax-keyword">TO</span> ls_deposit_upd.
